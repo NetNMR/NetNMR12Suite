@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE>Edit Parameters Command</TITLE>
+</HEAD>
+<BODY>
+<P>Use this command to show a dialog box that will allow you to modify the parameters used
+to display and print the spectra.
+</P>
+
+<P>You can change the title displayed at the top of the page with the edit box at the top of this dialog.
+</P>
+
+<P>The controls in the Plot Range box specify which region of the spectra will be displayed.
+The <a href="display_mode.htm">display mode</a> affects many other features in <i>NetPlot</i>.
+If <b>None</b> is selected, the entire NMR data file will be displayed.  Please note that there will
+be no axis drawn if <b>None</b> is selected.  If <b>Hertz</b> or <b>PPM</b> is selected, the From and To range of
+the edit box will be populated with a range consistent with the data.  The From and To range
+may be specified in the edit boxes.  You can specify ranges outside the range of any or all of
+the current spectra.  In that case, an axis of the specified range will be shown and the data
+from each spectrum will be properly referenced to that axis.  Just remember, if you specify a
+<b>Hertz</b> or <b>PPM</b> range the data will be displayed accurately, according to each spectrum’s width
+and offset.  If <b>None</b> is selected, the full range of each data set will be show and the axis
+will not be displayed.
+</P>
+
+<P>The spectra size and relative offset is set with the controls in the <b>Spectrum Size and
+Offset (cm)</b> box.  You can explicitly set these values or have <i>NetPlot</i> decide the best values
+based on the current page layout and current number of spectra with the “Auto Arrange” button.
+If the Y-offset is zero <i>NetPlot</i> will automatically offset the labels so that they will
+not overlap. With zero Y-offset, you will probably want to <a href="hid_edit_colors.htm">assign
+a unique color to each spectrum</a>.
+</P>
+
+<P>Each spectrum can be labeled with values taken from the flexible header using controls in
+the <b>Label</b> dropdown.  You can use NetPlot’s sister application, <i>NetNMR</i>, to view, set, delete and
+define values in the flexible header.  Once a flex header name is specified, its position relative
+to the low right corner of a box containing the spectrum can be set.  The <b>Auto Arrange</b> button
+will calculate a suggested position based on the current data files.
+</P>
+
+<P>If at least one spectrum is currently displayed, an <b>Auto Arrange</b> button will be visible.
+Pressing this button will calculate optimal values for the spectrum Height and Width, Y Offset
+(the X Offset will be zeroed) and label positions. The <b>Auto Arrange</b> command is also available
+from the command bar.
+</P>
+
+<P>In local scaling mode (the default) minimum and maximum values for the range of data being
+displayed will be used to scale each spectrum.  If the <a href="hid_view_global.htm">Global
+Scaling</a> control is checked, the
+union of the minima and maxima of all the spectra will be used to scale each spectrum.  Use
+this control if you want to show relative intensity difference between spectra obtained under
+similar conditions.
+</P>
+
+<P>The font size, in points (1/72 inch) can be specified for the title, labels and axis.
+</P>
+
+<P>The each spectrum can be individually scaled vertically by the
+<a href="hid_process_yexpansion.htm">Y Expansion Factor</a> control.  Any data
+values extending beyond the specified Height of the spectrum (when the Y Expansion Factor is
+greater than 1.0) will be truncated to the spectrum height.
+</P>
+
+<p>The <a href="accelerator.htm">accelerator</a> for this command is Control+P.</p>
+</BODY>
+</HTML>

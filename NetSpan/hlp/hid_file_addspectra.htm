@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>(File Add Spectra command)</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+</HEAD>
+<BODY>
+<P><A NAME="hid_file_addspectra"></A><B>AddSpecra command (File menu)</B></P>
+<P>Use this command to add spectra to the current <EM>NetSpan</EM> document. The 
+following dialog is displayed:</P>
+<P><IMG alt="add spectra dialog" src="images/addspectra.gif"></P>
+<P>The top of the dialog display the current directory. Below the current 
+directory are four lists that are used for slecting spectra. The left most 
+list is used to select an NMR server on the network, or you can select "My 
+Computer" to use <EM>NetNMR</EM> *.NMR or *.NPL files. If you connect to "My 
+Computer a list is visible to the immediate right to slect drives on your 
+computer. These can be local and network drives. If an NMR server is 
+selected, the drive list will not be visible.</P>
+<P>The final two lists display the directories and NMR files in the current 
+directory. Either double click on a directory or single-click and press the "Go 
+To" button to move to that directory.</P>
+<P>The you can select more than one file in the File dialog to open using the usual 
+Windows methods for multiple selections: the Control key will allow you 
+to add a single item to the selection and the Shift key will add a multiple 
+inclusion to the current selection. After you select the files you need, click 
+the "OK" button to add these files to current document. All added files 
+must have the same spectral window (number of points, spectrometer frequency, sweep width and offset) 
+and match any files already in the current document, otherwise they will be 
+ignored. Keep in mind that multiple spectra may be added to the current 
+document if the file being added is an arrayed file. In that case each 
+sub-spectrum will be added to the current document.</P>
+<P>Spectra name will be used as the label unless a header variable called "array" 
+is defined and has a value that is the name of another defined header variable. 
+In that case the value of that variable will be used as the label.
+When importing <i>NetPlot</i> files, the <i>NetPlot</i> label will be used.</P>
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Kernel command (Process menu))</TITLE>
+</HEAD>
+<BODY>
+<P><A NAME="hid_process_kerneltype"></A><B>Kernel command (Process menu)</B></P>
+<P>Use this command to copy selected the kernel function used to fit the observed data.</P>
+<P>All kernel functions are two parameter exponential functions. The first parameter is always<b>A</b>, the intensity of the exponential. The second parameter is either a rate constant, <b>R</b>, or atime constant, <b>T</b>, depending on the exact form of the particular kernel function.</P><p>There are currently three kernel functions:</p>
+<TABLE cols=2 width=900>
+<TR VALIGN="top">
+<TD width=15%><b>T2</b></TD>
+<TD width=85%>This simple exponential decay is characterized by the equation <b>y = exp( -t / T2 )</b>, where<b>t</b> is the X-values of the input data and is the delay time in a T2 experiment. The t data is specifiedin the first column of input data, see the <a href="hid_file_open.htm">File open</a>help topic. T2 is the characteristic decay time.</TD>
+</TR><TR VALIGN="top">
+<TD width=15%><b>T1</b></TD>
+<TD width=85%>This simple exponential recovery is characterized by the equation <b>y = (1 - exp( -t / T2 ) )</b>,where <b>t</b> is the X-values of the input data and is the delay time in a T1 recovery experiment, possibly asaturation recovery experiment but can also be used for T1 inversion recovery experiments. The t data isspecified in the first column of input data, see the<a href="hid_file_open.htm">File open</a> help topic. T1 is the characteristic recovery time. The constant termis the caclculate starting intensity value (at t = 0). The intensity at infinite time has to be calculatedby the user from the sum of all the intensities of each term in fit, including the constant.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=15%><b>DOSY</b></TD>
+<TD width=85%>This simple exponential decay is characterized by the equation <b>y = exp( -x * D )</b>, where<b>x</b> is the X-values of the input data and is derrived from the DAC value of the pulsed gradient appliedin a stimulated echo experiment. The DAC data is specified in the first column of input data, see the<a href="hid_file_open.htm">File open</a> help topic. D is the diffusion constant.</TD>
+</TR>
+</TABLE><p>If DOSY is the selected kernel, the user must specify five constants that are used to convert the DAC valueto the <b>x</b>-values as well as the hydrodynamic radii:</p><p><b>Gauss/cm/DAC</b> specifies the gradient field, in units of Gauss/cm, that willbe generated per DAC unit. Typical values for a modern pulsed field gradient probe are 0.0233.Internally the gradient strength will be converted to Tesla/meter.</p><p><b>Time Cubed</b> is the quanitity <b>gt^2 * (d - gt/3)</b>, where <b>gt</b> is total gradient time for thestimulated echo experiment and <b>d</b> is the delay time for the stimulated echo. Typical values for a 1.5 mspulsed field gradient and 50 ms delay is 4.41e-7 s.</p><p><b>Gamma</b> is the nuclear magnetogyric ratio, in units of radians/sec/Tesla. For a 600 MHz spectrometer,the proton magentogyric ratio is about 2.67322e9/(sT).</p><p><b>Temperature</b> is the temperature, in degrees Celcius, of the sample during the DOSY exeriment.</p><p><b>Solvent</b> is the name of the solvent and is selected from a drop-down combo box. Once selected, theviscosity constant will be populated. If the actual solventis not in the list, the user should select "Other" and specify the viscosity manually.</p><p><b>Viscosity</b> is the solvent dynamic viscosity, in Pascal-seconds (Poise). This will usually be filledby the solvent selection, but can be manually set.</p><p>These first three DOSY values are combined with a 1.0e-10 scaling factor so that ILT will report the diffusionconstants as D*1.0e10 m^2/s.</p><p>The sample temperature and solvent viscosity are used to convert the diffusion constant to a sphericalhydrodynamic radius. Propagation of errors is used the convert the diffusion error to the radius error.Hydrydynamic radius is only listed on the <a href="hid_view_text.htm">text summary</a> of the fit.</p></BODY>
+</HTML>

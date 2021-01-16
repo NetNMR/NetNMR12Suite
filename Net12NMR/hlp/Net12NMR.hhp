@@ -1,0 +1,119 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=Net12NMR.chm
+Contents file=Net12NMR.hhc
+Index file=Net12NMR.hhk
+Default topic=main_index.htm
+Display compile progress=No
+Full-text search=Yes
+Language=0x0409 English (United States)
+
+
+[FILES]
+afx_hidd_fileopen.htm
+afx_hidd_filesave.htm
+afx_hidp_default.htm
+hid_app_exit.htm
+hid_edit_copy.htm
+hid_file_close.htm
+hid_file_open.htm
+hid_file_save.htm
+hid_file_save_as.htm
+hid_ht_caption.htm
+hid_ht_nowhere.htm
+main_index.htm
+menu_edit.htm
+menu_file.htm
+menu_help.htm
+menu_view.htm
+menu_window.htm
+nmr_file_explorer.htm
+scrollbars.htm
+ribbon_tab_baseline.htm
+ribbon_tab_header.htm
+ribbon_tab_home.htm
+ribbon_tab_integral.htm
+ribbon_tab_peaks.htm
+ribbon_tab_process.htm
+ribbon_tab_shelf.htm
+hid_file_print.htm
+hid_file_print_preview.htm
+hid_file_print_setup.htm
+
+[ALIAS]
+HIDR_MAINFRAME = main_index.htm
+HIDR_Net12NMRTYPE = HIDR_DOC1TYPE.htm
+
+main_index							= main_index.htm
+afx_hidd_fileopen					= afx_hidd_fileopen.htm
+afx_hidd_filesave					= afx_hidd_filesave.htm
+AFX_HIDP_DEFAULT					= AFX_HIDP_DEFAULT.htm
+hid_app_exit						= hid_app_exit.htm
+hid_edit_copy						= hid_edit_copy.htm
+hid_file_close						= hid_file_close.htm
+hid_file_open						= hid_file_open.htm
+hid_file_save						= hid_file_save.htm
+hid_file_save_as					= hid_file_save_as.htm
+hid_ht_caption						= hid_ht_caption.htm
+hid_ht_nowhere						= hid_ht_nowhere.htm
+menu_edit							= menu_edit.htm
+menu_file							= menu_file.htm
+menu_help							= menu_help.htm
+menu_view							= menu_view.htm
+nmr_file_explorer					= nmr_file_explorer.htm
+menu_window							= menu_window.htm
+ribbon_tab_home						= ribbon_tab_home.htm
+ribbon_tab_process					= ribbon_tab_process.htm
+ribbon_tab_baseline					= ribbon_tab_baseline.htm
+ribbon_tab_peaks					= ribbon_tab_peaks.htm
+ribbon_tab_integral					= ribbon_tab_integral.htm
+ribbon_tab_header					= ribbon_tab_header.htm
+ribbon_tab_shelf					= ribbon_tab_shelf.htm
+scrollbars							= scrollbars.htm
+hid_file_print						= hid_file_print.htm
+hid_file_print_preview				= hid_file_print_preview.htm
+hid_file_print_setup				= hid_file_print_setup.htm
+HID_HT_HSCROLL						= scrollbars.htm
+HID_HT_VSCROLL						= scrollbars.htm
+AFX_HIDP_INVALID_FILENAME			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_OPEN_DOC			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_SAVE_DOC			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_ASK_TO_SAVE				= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_CREATE_DOC		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FILE_TOO_LARGE				= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_START_PRINT		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_LAUNCH_HELP		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_INTERNAL_FAILURE			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_COMMAND_FAILURE			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_PARSE_INT					= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_PARSE_REAL					= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_PARSE_INT_RANGE			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_PARSE_REAL_RANGE			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_PARSE_STRING_SIZE			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_INVALID_FORMAT		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_INVALID_PATH		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_DISK_FULL			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_ACCESS_READ			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_ACCESS_WRITE		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_IO_ERROR_READ		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_IO_ERROR_WRITE		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_STATIC_OBJECT				= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_CONNECT			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_SERVER_BUSY				= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_BAD_VERB					= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_MEMORY_ALLOC		= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_NOTIFY			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_LAUNCH			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_ASK_TO_UPDATE				= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_UPDATE			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_REGISTER			= AFX_HIDP_DEFAULT.htm
+AFX_HIDP_FAILED_TO_AUTO_REGISTER	= AFX_HIDP_DEFAULT.htm
+
+[MAP]
+#include HTMLDefines.h
+
+[TEXT POPUPS]
+HTMLDefines.h
+
+[INFOTYPES]

@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P><A NAME="hid_process_phase"></A><B>Phase Dialog</B></P>
+
+
+
+<P>The <b>Phase Dialog</b> is used to phase recently
+Fourier transformed spectra. The button commands on this dialog only work on
+data that have been <a href="hid_file_add.htm">added</a> during the current session
+and only if the raw FID files have been imported and then transformed using the
+<a href="hid_process_process.htm">Process dialog</a>. Please note that imaginary
+data will not be saved in a Netplot (*.npl) file,
+so data must be phased during the same session that the file
+data was <a href="hid_file_add.htm">added</a>. Use the "Applies to" feature to direct
+the current command to either an individual spectrum, or all the spectra in the current
+NetPlot document. After phasing, any baseline correction previously done on the spectrum
+will be lost. This dialog contains the following buttons:</P>
+
+<TABLE cols=2 width=900>
+
+<TR VALIGN="top">
+
+<TD width=18%>All checkbox</TD>
+
+<TD width=82%>This checkbox determine the object of each of the phase commands. Checking
+this box will apply the desired phase correction on all of the data in the current document.
+Unchecking this box will activate the ajacent dropdown and a single spectrum in the current
+NetPlot document can be selected.</TD>
+
+<TR VALIGN="top">
+
+<TD width=18%>All Others button</TD>
+
+<TD width=82%>This command is only available if the <b>All checkbox</b> is currently
+not selected. This command will propagate the current global phase correction to all spectra
+in the current NetPlot document except the spectrum currently selected in the <b>Apply to:</b>
+dropdown.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>Up button</TD>
+
+<TD width=82%>This command is only available if the <b>All checkbox</b> is currently
+not selected. This command will propagate the current global phase correction to all spectra
+<b>above</b> the spectrum currently selected in the <b>Apply to:</b>
+dropdown.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>Down button</TD>
+
+<TD width=82%>This command is only available if the <b>All checkbox</b> is currently
+not selected. This command will propagate the current global phase correction to all spectra
+<b>below</b> the spectrum currently selected in the <b>Apply to:</b>
+dropdown.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>Auto A Only button</TD>
+
+<TD width=82%>The linear global phase correction is set to zero and the global phase constant
+is varied for the spectrum to automatically optimze the phase. The spectrum range of this command
+is determined by the controls in the <b>Apply to:</b> selection box.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>Auto A & B button</TD>
+
+<TD width=82%>Both the linear global phase correction and the global phase constant
+is varied for the spectrum to automatically optimze the phase. The spectrum range of this command
+is determined by the controls in the <b>Apply to:</b> selection box.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>Magnitude button</TD>
+
+<TD width=82%>The phase-independent magnitude spectrum is calculated.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>At Cursor button</TD>
+
+<TD width=82%>This command is only enabled when the <b>All</b> checkbox is unselected.
+When this button is pressed, the NetPlot display only displays the selected spectrum,
+allowing the user to mouse-adjust the phase at the position of the two zoom cursors.
+Keyboard commands <b>L</b> and <b>R</b> will move between the left and right zoom cursors,
+respectively. (Alternately, the left mouse button can be used to toggle between the left
+and right cursor phase modes.) the phase of the spectrum of the other cursor will be held in place
+while the user move the mouse up and down. (Right and left mouse motion will be ignored.)
+The <b>Shift</b> and <b>Control</b> keys can be used to respectively amplify and soften
+the effect of the mouse movements on the computed phase correction.
+When the user is satisfied with the current phase correction, a <b>C</b> key press will terminate the
+<b>At Cursor</b> phase mode. While in this interactive phasing mode, the vertical expansion
+of the spectrum can be adjusted up or down with the <b>U</b> and <b>D</b> keys. The current phase can
+be reset with a <b>T</b> key press. Alternatively, you can immediately move to the next spectrum (above or below)
+by pressing the <b>Q</b> or <b>Z</b> keys. In this case the phase at the current spectrum will then
+define the global phase spectrum and this will be applied to the next spectrum. The current expansion
+and zoom regions as well as the location of the zoom cursors will be maintained, making it easy to phase
+an entire NetPlot Document. The <b>L</b>, <b>R</b>, <b>U</b>, <b>D</b>, <b>T</b>, <b>C</b>, <b>Q</b>
+and <b>Z</b>
+keyboard command are also available from a context menu by clicking the right mouse button
+while in the <b>At Cursor</b> phase mode.</TD>
+
+</TR>
+</TABLE>
+</BODY>
+</HTML>

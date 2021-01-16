@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE>File Add command</TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="adding files">
+</OBJECT>
+<P>Use this command to show a dialog box to allow you to add, remove and rearrange spectra in NetPlot.</P>
+
+<P>Single click on an NMR Server in the upper left corner of this dialog and you will be connected to that
+NMR Server.  This list box will always list “My Computer” along with other official NMR Servers to which you
+have read access.   Single clicking on an NMR server will access that server and fill the directory list box
+in the lower left of the dialog with the current directory contents from that server.  The current directory
+for that server is displayed above the file list on the right side of the dialog.  Only directories (denoted
+with a trailing “/” or “\”) and NMR data will be displayed in the “Directories and Files”
+list box.</P>
+
+<P>Double clicking on a directory in this list box will change the current directory for that server to that
+directory and then refill the Directories and Files list box.  Double clicking on the first entry (“../” or
+“..\”) will move up the directory tree.  When viewing “My Computer”, the “Drive:” dropdown list is enabled
+and allows the current drive to be selected from a list of all available drive on the PC.  This includes mapped
+network drives.  Double clicking on an NMR spectrum will add that file to the files list box on the right side
+of the dialog.  Buttons below the files list box will allow you to remove and rearrange the list of files.
+You must select a single file or a contiguous range of files
+before you can move them up or down.  NMR files will be displayed, top to bottom, in the
+same order as the files list box. A “Reverse All” button is there to quickly reverse the order of all the
+added spectra.</P>
+
+<P>Imported datasets that are arrays will be added as individual dataset.  Once the datasets have been imported
+by clicking the “Okay” button this dialog may be executed again to reorder or edit the individual datasets.</P>
+
+<p>Raw FID data can be imported, but not saved. Imported FID data must be transformed using the
+<a href="hid_process_process.htm">Process dialog</a> and phased using the <a href="hid_process_phase.htm">Phase
+dialog</a> before the NetPlot document is saved because the NetPlot document contains no imaginary data.</p>
+
+<p>The <a href="accelerator.htm">accelerator</a> for this command is Control+A.</p>
+
+</BODY>
+</HTML>

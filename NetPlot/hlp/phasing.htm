@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE>How to manually phase an entire NetPlot document</TITLE>
+</HEAD>
+<BODY>
+
+<p>While phasing command buttons on the <a href="hid_process_phase.htm">phase dialog</a> can be
+performed on all spectra in the current NetPlot document, this is not desirable in some cases.
+Often, various kinds of relaxation experiments will display a small phase shift from spectrum
+to spectrum and autophase my not produce an acceptible phase for each spectrum. In that case
+the <b>At Cursor</b> button command is the preferred technique for phasing.</p>
+
+<p>It is not necessary to perform inital automatic phase corrections on each of the spectra,
+because the <b>At Cursor</b> phase mode will automatically update each spectrum with the current
+global phase when moving between the different spectra.</p>
+
+<p>Start manually phasing by first selecting either the top-most or bottom-most spectrum in the
+<b>Applys to:</b> selection drop-down list. (The <b>All</b> checkbox must cleared before an
+individual spectrum can be selected. Before pressing the <b>At Cursor</b> button, the zoom cursors
+should be placed on resonances near the left and right side of the current displayed region. (If the
+<b>At Cursor</b> button is pressed before the zoom cursors are set, NetPlot will remind you to
+set the zoom cursors.)</p>
+
+<p>After pressing the <b>At Cursor</b> button, the selected spectrum will be displayed in the middle
+of the display window, without the boundry sheet. The mouse cursor will disappear and vertical mouse
+motion will move the phase of the spectrum around the left or right cursor. (the current location of the
+control point will be display by a single zoom cursor.) As the mouse is moved up and down the phase
+of the entire spectrum will be adjusted while holding the non-selected zoom cursor point at zero.
+You can select between the left and right zoom cursors by either typing <b>L</b> or <b>R</b> on the
+keyboard or pressing the left mouse button.</p>
+
+<p>It is generally useful to highly expand the vertical scale of the spectrum so that the phasing
+around the base of the peaks can be seen in detail. The vertical expansion can be adjusted <b>up</b>
+or <b>down</b> with the <b>U</b> or <b>D</b> keys, respectively. Iterating between the left and right
+zoom cursors a couple of times is usualy sufficient to produce a satisfactory phase correction.</p>
+
+<p>While you can apply this current phase correction to all other spectra in the current document
+by typing a <b>C</b> to exit the manual phase mode and then pressing one of the buttons in the
+<b>Clone Phase:</b> section, you can switch to the next spectrum without leaving the manual
+phase mode. The <b>Q</b> and <b>Z</b> keys move to the spectrum above or below the currently selected
+spectrum. Moving between spectra in this way perserves the current Y-scale and immediately applies
+the current global phase to the new spectrum. In this way you can quickly phase an entire NetPlot
+document. If you find that spectra are immediately acceptable without further mouse adjustment
+<b><i>and</i></b> it is susupected that all of the remaining spectra will not need any special
+adjustment, you can exit the manually phasing mode by typing <b>C</b> and then using one of the
+<b>Clone Phase:</b> buttons to propagate the current global phase to the remaining spectra.</p>
+
+<p>If you want to move to a spectrum that is not adjcent to the current spectrum and <b>don't</b>
+want to affect the phase of the spectra between, exit the manual phasing mode by typing <b>C</b>
+and then selecting the desired spectrum in the <b>Apply To:</b> drop-down selection list
+and finally pressing the <b>At Cursor</b> button.</p>
+
+<p>When in the <b>At Cursor</b> manual phase mode, there are several special keyboard commands
+available:</p>
+
+<table>
+
+<tr>
+<td><b>L</b></td>
+<td>Move to the <b>l</b>eft cursor.</td>
+</tr>
+
+<tr>
+<td><b>R</b></td>
+<td>Move to the <b>r</b>ight cursor.</td>
+</tr>
+
+<tr>
+<td><b>C</b></td>
+<td>Exit (<b>c</b>omplete) the manual phasing mode.</td>
+</tr>
+
+<tr>
+<td><b>T</b></td>
+<td>Rese<b>t</b> the phase to the last global phase point. (The last global phase point is saved when
+moving between spectra with the <b>Q</b> or <b>Z</b> keys.)</td>
+</tr>
+
+<tr>
+<td><b>U</b></td>
+<td>Blow <b>u</b>p the vertical expansion.</td>
+</tr>
+
+<tr>
+<td><b>D</b></td>
+<td>Shrink <b>d</b>own the vertical expansion.</td>
+</tr>
+
+<tr>
+<td><b>Q</b></td>
+<td>Move to the spectrum above. If you are already at the top of the NetPlot document, this
+command will do nothing.</td>
+</tr>
+
+<tr>
+<td><b>Z</b></td>
+<td>Move to the spectrum below. If you are already at the bottomof the NetPlot document, this
+command will do nothing.</td>
+</tr>
+
+</table>
+
+</BODY>
+</HTML>

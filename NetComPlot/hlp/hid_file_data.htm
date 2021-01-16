@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE>(File Add Command)</TITLE>
+</HEAD>
+<BODY>
+<P>Use this command to display a dialog to manage the 1- and
+2-dimension data in the current composite plot. On the left o
+ this dialog, you can connect to different NetNMR servers and
+ add new 1- and 2-D data.  Click on any server in the NMR Server
+ list and the list box below will be filled with the names of
+ directories and processed NMR data files on the current directory
+ from that server.
+</P>
+<P>Double clicking on a directory will move to that directory.
+Double clicking on an NMR file will add that file to the
+NetComPlot composite file. If the NMR file is a 2-D file, it will
+be added to the 2-D list. If the file is a 1-D NMR file you will
+be asked if you want that file added to the list of horizontal NMR
+files or vertical NMR files.  Horizontal files will appear above
+the 2-D spectra and vertical files will appear to the left of the
+2-D spectra.
+</P>
+<P>Since NetComPlot does not allow the user to rotate the 2-D
+spectra, the horizontal/vertical decision is an important,
+especially for heteronuclear 2-D composite plots. However if a
+mistake is made about the placement of a 1-D spectrum, it is
+easy to move the 1-D spectra back and forth between horizontal
+and vertical by first selecting the 1-D spectrum in this dialog
+and then hitting the active arrow button between the horizontal
+and vertical 1-D list boxes.
+</P>
+<P>The order in which 2-D, horizontal 1-D and vertical 1-D files
+appear in these three lists boxes is important. 2-D spectra are
+rendered in reverse order. That is, 2-D spectra that appear higher
+in the list will appear to be draw above, or on top of 2-D spectra
+lower in the list.  1-D spectra higher in the vertical or
+horizontal list boxes will be rendered farther away from the 2-D
+spectra. The order of any of the spectra in any of the 3 list
+boxes can be easily changed: First select the spectrum to be moved
+and simply press the Move Up or Move Down button.
+</P>
+<P>Any file can be removed from the NetComPlot by selecting the
+file and pressing the Remove button. All NMR spectra can be
+removed by pressing the Remove All button.
+</P>
+<P>NetComPlot retains a small amount of text-based information
+about each NMR file in the composite file. This information can be
+modified to include any text-based information you like by
+pressing the Edit Info… button.  The first line of this text will
+be used as the NMR spectrum label in the Parameters dialog and
+when you revisit this dialog. You may not edit this information
+until the file has been displayed at least once.
+</P>
+<P>Finally, projections from any 2D data can be calculated and
+added to the list of 1D spectra to be plotted. Simply select the
+2D data you wish to project and press the “Projection” button.
+(The button will not be active until the 2D spectrum has been
+displayed at least once. A dialog will be displayed so the user
+can choose from four different projections, two for the directly
+detected dimension and two for the indirectly detected dimension.
+For each dimension, the user can choose a positive projection or a
+negative projection that shows respectively the maximum or minimum
+data point along that row or column. A simple graph is used so the
+user can easily select which projections are desired. On selecting
+“OK” projections are calculated and added to the appropriate 1D
+list. At that point they are like any other 1D spectrum that has
+been added. They may be moved or deleted.
+</P>
+</BODY>
+</HTML>

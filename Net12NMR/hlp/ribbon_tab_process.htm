@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta name="GENERATOR" content="Microsoft Visual Studio 8.0"/>
+<title>Ribbon Process Tab</title>
+</head>
+<body>
+<p>The &quot;Process&quot; pane contains buttons and other items for most of the basic process commands.</p>
+<p><b>Truncate</b> will shrink the data size to the largest power of two that is smaller than the current data size.
+This is useful when the acquired data acquisition time was too long.</p>
+<p><b>DC Level</b>  will subtract averagse determined by the left-most points of the FID from the real and imaginary
+FIDs. With a properly functioning spectrometer this is usually not necesssary, but can remove a center, carrier spike,
+if present.</p>
+<p><b>Quad Correct</b> is usually not necessary but will re-orthoganalize the acquired FID if carrier images show up
+in the FT spectrum.</p>
+<p><b>Left</b> and <b>Right Shift</b> will move the FID to the left or right by one point causing a zero point to be
+appended on the opposite side. Usually only useful for certain kinds of solid-state NMR data.</p>
+<p><b>Apodize</b> will apply a window to the FID specified by the three drop-down selections next to the button.
+The applied shape can be either &quot;Lorentzian&quot; or &quot;Gaussian&quot;. The numerical value is selected in the
+next drop-down selection. Values other than the current drop-down values can be entered via the keyboard. Negative
+values are allowed. Use some percaution. Use of negative values that are larger in magnitude that tne narrowest line
+in the data will result in trashed data. Broad-tailed Lorentzian line-shapes can be replaces with narrow-tailed
+Gaussian lineshapes by apodizing twice, first with a gentle negative Lorentzian apodization and then with a gentle
+positive gaussian apodization. Finally the units of the numerical value is specified with the third drop-down selection.
+&quot;Hertz&quot; is usually chosen for solution spectra while &quot;PPM&quot; is usually used for 
+solid-state spectra.</p>
+<p><b>Zero Fill</b> will grow the data set to the smallest power of two that is greater then the current size of the
+data.</p>
+<p><b>Fourier Transform</b> will transform time (FID) data to frequency (spectrum) data. The Global Phase Correction
+is also applied to the new Fourier-transformed spectrum.</p>
+<p><b>Audio Filter Comp</b> will correct older, non-digital NMR spectrum data for audio filter drop near the edges
+of the spectrum.</p>
+<p>The &quot;Phase&quot; pane is used for phasing Fourier-transformed data.</p>
+<p><b>Magnitude</b> will produce a phase-independent magnitude mode spectrum. This command is only useful for spectra
+that simply cannot be properly phased.</p>
+<p><b>Zero Phase</b> will set the current global phase correction to zero and apply that correction to the current
+document.</p>
+<p><b>At Cursors</b> will perform an operator-assisted manual phase of the current spectrum. Start by placing the zoom
+cursors on two realatively large peaks near the left and right edge of the spectum. These two points will become the
+anchor points and adjustment points when manual phasing starts. After pressing the
+<b>At Cursors</b>button, the display will change.
+A single cursor will show where the active point in the spectrum is. Moving the mouse up and down will change the phase of
+this point while keeping the phase constant at the location of the other cursor (hidden for the moment).
+The non-active cursor location becomes the anchor point and is essentially the fulcrum of a
+see-saw, while the active point moves that part of the see-saw up and down. Click the select mouse button to
+switch cursors, hiding the active cursor and showing the other cursor, where the anchor point. Continue phasing with the mouse,
+now at the other cursor. You can expand the vertical with the mouse wheel or
+use the context menu to select another command. Iterate from the left fulcrum point to the right until satisfied.
+When done type a &quot;c&quot; on the keyboard (or select the approprite command from the context menu). The mouse
+wheel can be used to change the veritical expansion of the display. It is generally a good idea to highly expand the
+vertical scale when adjusting the phase. It makes it easier to judge a pure absorption spectrum by looking at the
+baseline region near a peak being phase. Holding down the &lt;CONTROL&gt; key will instead alter the spectrum vertical
+offset (the DC-level) so that the baseline region can be better viewed in the case of very high vertical expansion.
+</p>
+<p><b>Autophase A&amp;B</b> will perform an autophase, trying to optimize by the constant (&quot;A&quot;) and linear
+(&quot;B&quot;) phase correction of the spectrum.</p>
+<p><b>Autophase A Only</b></p> will set the linear (&quot;B&quot;) phase to zero and optimize the constant
+(&quot;A&quot;) phase correction.
+<p><b>Invert Phase</b> will increment the constant phase correction by 180&deg;.</p>
+<p>Controls in the <b>Manual Phase Correct</b> pane is used to manually change the constant or linear phase values. Choose a
+magnitude of &quot;10&quot;, &quot;1&quot; or &quot;0.1&quot; degrees and choose which term (&quot;Const&quot; or
+&quot;Linear&quot;) and push the <b>Increment</b> or <b>Decrement</b> to add or subtract the selected value to the
+selected term.</p>
+<p>Please note that phasing commands in both the <b>Phase</b> and the <b>Manual Phase Correct</b> panes operate on the
+current active spectrum and the resulting phase becomes the new Global Phase Correction.</p>
+</body>
+</html>

@@ -1,0 +1,654 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\ILT.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ILT.ico"
+IDR_ILTTYPE             ICON                    "res\\ILTDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_PROCESS_ILT
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_COLORS
+    SEPARATOR
+    BUTTON      ID_VIEW_TRANSFORM
+    BUTTON      ID_CONFIDENCEINTERVAL_SIMPLE
+    BUTTON      ID_CONFIDENCEINTERVAL_JOINT
+    BUTTON      ID_VIEW_PREVIOUS
+    BUTTON      ID_VIEW_NEXT
+    BUTTON      ID_VIEW_TEXT
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "C&olors...",                  ID_EDIT_COLORS
+        MENUITEM SEPARATOR
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+    END
+    POPUP "&Process"
+    BEGIN
+        MENUITEM "&Kernel Type...",             ID_PROCESS_KERNELTYPE
+        MENUITEM "&ILT...",                     ID_PROCESS_ILT
+        MENUITEM "&Monte Carlo...",             ID_PROCESS_MONTECARLO
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Previous",                   ID_VIEW_PREVIOUS
+        MENUITEM "&Next",                       ID_VIEW_NEXT
+        MENUITEM "&Exponential at...",          ID_VIEW_EXPONENTIAL
+        MENUITEM SEPARATOR
+        MENUITEM "T&ext ...",                   ID_VIEW_TEXT
+        POPUP "Confidence Level"
+        BEGIN
+            MENUITEM "70%",                         ID_CONFIDENCEINTERVAL_1
+            MENUITEM "90%",                         ID_CONFIDENCEINTERVAL_2
+            MENUITEM "95%",                         ID_CONFIDENCEINTERVAL_3
+            MENUITEM "99%",                         ID_CONFIDENCEINTERVAL_4
+            MENUITEM "99.9%",                       ID_CONFIDENCEINTERVAL_5
+            MENUITEM "99.99%",                      ID_CONFIDENCEINTERVAL_6
+            MENUITEM SEPARATOR
+            MENUITEM "Simple",                      ID_CONFIDENCEINTERVAL_SIMPLE
+            MENUITEM "Joint",                       ID_CONFIDENCEINTERVAL_JOINT
+        END
+        MENUITEM "&Transform",                  ID_VIEW_TRANSFORM
+        MENUITEM SEPARATOR
+        MENUITEM "T&oolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About ILT...",               ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 223, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " "
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,6,20,20,0,WS_EX_DLGMODALFRAME
+    CTEXT           "ILT Version 1.0",IDC_VERSIONSTATIC,38,12,117,8,SS_NOPREFIX
+    CTEXT           "Copyright © 2016 by Thomas A. Early",IDC_STATIC,41,36,135,14,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,161,6,50,16,WS_GROUP
+END
+
+IDD_ILTDIALOG DIALOGEX 0, 0, 247, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Exponential Sum Fit"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Method",IDC_STATIC,7,7,232,70
+    CONTROL         "Wiscombe - Evans - Gragg - LeVeque",IDC_EGLMETHODRADIO,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,14,20,129,10
+    CONTROL         "Inverse Laplace Transform",IDC_ILTMETHODRADIO,"Button",BS_AUTORADIOBUTTON,14,39,105,12
+    CONTROL         "SIRT",IDC_SIRTMETHODRADIO,"Button",BS_AUTORADIOBUTTON,14,59,32,10
+    RTEXT           "alpha:",IDC_STATIC,125,40,20,12
+    EDITTEXT        IDC_ILTALPHAEDIT,147,37,38,14,ES_AUTOHSCROLL
+    RTEXT           "iter count:",IDC_STATIC,48,59,36,12
+    EDITTEXT        IDC_SIRTCOUNTEDIT,86,56,38,14,ES_AUTOHSCROLL
+    RTEXT           "tolerance:",IDC_STATIC,137,59,33,12
+    EDITTEXT        IDC_SIRTTOLERANCEEDIT,172,56,38,14,ES_AUTOHSCROLL
+    GROUPBOX        "Range",IDC_STATIC,7,80,232,33
+    RTEXT           "From:",IDC_STATIC,28,95,20,12
+    EDITTEXT        IDC_ILTFROMEDIT,49,92,30,14,ES_AUTOHSCROLL
+    RTEXT           "To:",IDC_STATIC,96,94,15,12
+    EDITTEXT        IDC_ILTTOEDIT,113,92,30,14,ES_AUTOHSCROLL
+    RTEXT           "Count:",IDC_STATIC,163,94,24,12
+    EDITTEXT        IDC_ILTCOUNTEDIT,188,92,30,14,ES_AUTOHSCROLL
+    GROUPBOX        "Post-Fit Process",IDC_STATIC,7,116,232,31
+    CONTROL         "Simplify (combine adjacent) terms",IDC_SIMPLIFYCHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,129,123,10
+    CONTROL         "then Optimize",IDC_OPTIMIZECHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,129,60,10
+    GROUPBOX        "Confidence Level (%)",IDC_STATIC,7,151,232,28
+    CONTROL         "70.0",IDC_CI1RADIO,"Button",BS_AUTORADIOBUTTON | WS_GROUP,20,161,32,10
+    CONTROL         "90.0",IDC_CI2RADIO,"Button",BS_AUTORADIOBUTTON,54,161,33,10
+    CONTROL         "95.0",IDC_CI3RADIO,"Button",BS_AUTORADIOBUTTON,88,161,34,10
+    CONTROL         "99.0",IDC_CI4RADIO,"Button",BS_AUTORADIOBUTTON,122,161,32,10
+    CONTROL         "99.9",IDC_CI5RADIO,"Button",BS_AUTORADIOBUTTON,156,161,31,10
+    CONTROL         "99.99",IDC_CI6RADIO,"Button",BS_AUTORADIOBUTTON,190,161,35,10
+    CONTROL         "Iterate over all datasets",IDC_GLOBALCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,183,94,10
+    PUSHBUTTON      "Help",IDC_ILTHELPBUTTON,73,199,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,199,50,14
+    PUSHBUTTON      "Okay",IDOK,189,199,50,14
+END
+
+IDD_RICHTEXTDIALOG DIALOGEX 0, 0, 462, 362
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ILT Text Fit"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_RICHTEXTEDIT,"RichEdit20A",ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,7,7,448,328
+    CONTROL         "Terms Only",IDC_TERMSONLYCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,45,345,52,10
+    CONTROL         "All Exponentials",IDC_ALLEXPONCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,345,66,10
+    PUSHBUTTON      "Print",IDC_PRINTTEXTBUTTON,289,341,50,14
+    PUSHBUTTON      "Copy",IDC_COPYTEXTBUTTON,347,341,50,14
+    DEFPUSHBUTTON   "OK",IDOK,405,341,50,14
+END
+
+IDD_KERNELDIALOG DIALOGEX 0, 0, 277, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Kernel Selection"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Kernel Type",IDC_STATIC,7,7,111,76
+    CONTROL         "T2 : y = exp (-t / T2)",IDC_T2KERNELRADIO,"Button",BS_AUTORADIOBUTTON,15,22,98,10
+    CONTROL         "T1 : y = 1 -  exp (-t / T2)",IDC_T1KERNELRADIO,"Button",BS_AUTORADIOBUTTON,15,42,98,10
+    CONTROL         "DOSY : y = exp(-g * D)",IDC_DOSYKERNELRADIO,"Button",BS_AUTORADIOBUTTON,15,62,97,10
+    GROUPBOX        "DOSY Parameters",IDC_STATIC,127,7,142,136
+    EDITTEXT        IDC_DACTOGEDIT,133,20,60,13,ES_AUTOHSCROLL
+    LTEXT           "Gauss/cm/DAC",IDC_STATIC,197,22,60,9
+    EDITTEXT        IDC_TIMECUBEDEDIT,133,40,59,13,ES_AUTOHSCROLL
+    LTEXT           "Time Cubed",IDC_STATIC,196,42,43,9
+    EDITTEXT        IDC_GAMMAEDIT,133,61,60,13,ES_AUTOHSCROLL
+    LTEXT           "Gamma",IDC_STATIC,197,63,28,9
+    PUSHBUTTON      "Cancel",IDCANCEL,155,145,50,14
+    DEFPUSHBUTTON   "OK",IDOK,220,145,50,14
+    PUSHBUTTON      "Help",IDC_KERNELHELPBUTTON,93,145,50,14
+    COMBOBOX        IDC_SOLVENTCOMBO,133,82,100,61,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Solvent",IDC_STATIC,237,84,28,9
+    EDITTEXT        IDC_VISCOSITYEDIT,134,103,60,13,ES_AUTOHSCROLL
+    LTEXT           "Viscosity (Pa-s)",IDC_STATIC,198,105,53,9
+    EDITTEXT        IDC_TEMPERATUREEDIT,134,124,60,13,ES_AUTOHSCROLL
+    LTEXT           "Temperature (C)",IDC_STATIC,197,126,56,9
+END
+
+IDD_SELECTDECAYDIALOG DIALOGEX 0, 0, 186, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Decay"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_DECAYSELECTCOMBO,14,7,165,128,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Cancel",IDCANCEL,65,33,50,14
+    DEFPUSHBUTTON   "OK",IDOK,129,33,50,14
+END
+
+IDD_COLORDIALOG DIALOGEX 0, 0, 209, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Colors"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,52,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,89,52,50,14
+    COMBOBOX        IDC_COLORCOMBO,7,7,103,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_RECTSTATIC,"Static",SS_OWNERDRAW | SS_SUNKEN,117,7,22,12
+    PUSHBUTTON      "Black on White",IDC_BONWBUTTON,39,30,60,14
+    PUSHBUTTON      "White on Black",IDC_WONBBUTTON,111,30,60,14
+    PUSHBUTTON      "Change...",IDC_CHANGEBUTTON,148,7,54,14
+    PUSHBUTTON      "Set Default Colors",IDC_DEFAULTBUTTON,7,52,66,14
+END
+
+IDD_MONTECARLODIALOG DIALOGEX 0, 0, 278, 291
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Monte Carlo Simulation"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Model Terms:",IDC_STATIC,7,7,264,85
+    LISTBOX         IDC_TERMSLIST,17,16,112,67,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "New Term:",IDC_STATIC,134,13,131,49
+    RTEXT           "Intensity:",IDC_STATIC,147,25,34,9
+    EDITTEXT        IDC_AMPTERMEDIT,184,22,36,14,ES_AUTOHSCROLL
+    RTEXT           "holder:",IDC_TERMSTATIC,135,45,45,9
+    EDITTEXT        IDC_RATETERMEDIT,183,42,36,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add",IDC_ADDTERMBUTTON,225,32,36,14
+    PUSHBUTTON      "Delete",IDC_DELETETERMBUTTON,136,69,40,14
+    PUSHBUTTON      "Delete All",IDC_DEELETEALLBUTTON,181,69,40,14
+    PUSHBUTTON      "Paste",IDC_PASTETERMSBUTTON,226,69,40,14
+    GROUPBOX        "Observations:",IDC_STATIC,7,92,264,54
+    CTEXT           "message",IDC_MCMESSAGESTATIC,31,107,157,9
+    RTEXT           "# of points:",IDC_STATIC,11,129,39,8
+    EDITTEXT        IDC_OBSERVEDATACOUNTEDIT,54,126,30,14,ES_AUTOHSCROLL
+    RTEXT           "From:",IDC_STATIC,89,129,20,8
+    EDITTEXT        IDC_OBSERVEDATAFROMEDIT,113,126,30,14,ES_AUTOHSCROLL
+    RTEXT           "To:",IDC_STATIC,148,129,12,8
+    EDITTEXT        IDC_OBSERVEDATATOEDIT,164,126,30,14,ES_AUTOHSCROLL
+    GROUPBOX        "Spacing:",IDC_STATIC,207,99,57,43
+    CONTROL         "Linear",IDC_LINEARRADIO,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,220,113,35,10
+    CONTROL         "Log",IDC_LOGRADIO,"Button",BS_AUTORADIOBUTTON,220,128,27,10
+    GROUPBOX        "ITL Fit:",IDC_STATIC,7,151,264,92,WS_GROUP
+    RTEXT           "Alpha:",IDC_STATIC,12,172,22,8
+    EDITTEXT        IDC_MCALPHAEDIT,38,170,30,14,ES_AUTOHSCROLL
+    GROUPBOX        "Kernel Basis Set:",IDC_STATIC,76,157,186,31
+    RTEXT           "Count:",IDC_STATIC,83,173,23,8
+    EDITTEXT        IDC_MCBASISCOUNTEDIT,110,170,30,14,ES_AUTOHSCROLL
+    RTEXT           "From:",IDC_STATIC,147,173,20,8
+    EDITTEXT        IDC_MCBASISFROMEDIT,171,170,30,14,ES_AUTOHSCROLL
+    RTEXT           "To:",IDC_STATIC,210,173,12,8
+    EDITTEXT        IDC_MCBASISTOEDIT,225,169,30,14,ES_AUTOHSCROLL
+    CONTROL         "Simpify",IDC_MCSIMPLIFYCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,98,194,39,10
+    CONTROL         "Optimize",IDC_MCOPTIMIZECHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,194,43,10
+    GROUPBOX        "Confidence Interval:",IDC_STATIC,18,204,246,30
+    CONTROL         "70%",IDC_MCCI1RADIO,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,27,217,31,10
+    CONTROL         "90%",IDC_MCCI2RADIO,"Button",BS_AUTORADIOBUTTON,63,217,31,10
+    CONTROL         "95%",IDC_MCCI3RADIO,"Button",BS_AUTORADIOBUTTON,100,217,31,10
+    CONTROL         "99%",IDC_MCCI4RADIO,"Button",BS_AUTORADIOBUTTON,139,217,27,10
+    CONTROL         "99.9%",IDC_MCCI5RADIO,"Button",BS_AUTORADIOBUTTON,175,217,37,10
+    CONTROL         "99.99%",IDC_MCCI6RADIO,"Button",BS_AUTORADIOBUTTON,218,217,39,10
+    RTEXT           "RMS Noise:",IDC_STATIC,64,251,39,11
+    EDITTEXT        IDC_STDERROREDIT,107,248,30,14,ES_AUTOHSCROLL
+    RTEXT           "Iterations:",IDC_STATIC,138,251,44,12
+    EDITTEXT        IDC_ITERATIONSEDIT,186,248,36,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Help",IDC_MCHELPBUTTON,99,269,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,269,50,14
+    DEFPUSHBUTTON   "OK",IDOK,220,269,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 6,0,0,0
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Inverse LaPlace Transform"
+            VALUE "CompanyName", "Thomas A. Early"
+            VALUE "FileDescription", "ILT Application"
+            VALUE "FileVersion", "6.0.0.0"
+            VALUE "InternalName", "ILT"
+            VALUE "LegalCopyright", "Copyright © 2016 by Thomas A. Early.  All rights reserved."
+            VALUE "OriginalFilename", "ILT.exe"
+            VALUE "ProductName", "ILT Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_ILTDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_RICHTEXTDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 455
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 355
+    END
+
+    IDD_KERNELDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_SELECTDECAYDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_COLORDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_MONTECARLODIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    ID_INDICATOR_LABEL      "____________________________________________"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "ILT\n\nILT\nILT Files (*.ilt)\n.ilt\nILT.Document\nILT.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "ILT"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TRANSFORM       "Change view between observe and transform\nToggle display between obs and transform"
+    ID_VIEW_TEXT            "View the text description of the data\nView text"
+    ID_PROCESS_ILT          "Inverse Laplace Transform\ninverse Laplace transform"
+    ID_PROCESS_KERNELTYPE   "Select kernel function\nKernel Function"
+    ID_VIEW_EXPONENTIAL     "Select exponential column\nSelect Exponential"
+    ID_EDIT_COLORS          "Change display colors\nChange Colors"
+    ID_VIEW_PREVIOUS        "Previous column\nprevious column"
+    ID_VIEW_NEXT            "Next column\nnext column"
+    ID_PROCESS_MONTECARLO   "Perform a Monte Carlo Simulation\nMonte Carlo simulation"
+    ID_CONFIDENCEINTERVAL_1 "70% confidence interval (Z=1.04)\n70% confidence"
+    ID_CONFIDENCEINTERVAL_2 "90% confidence interval (Z=1.64)\n90% confidence"
+    ID_CONFIDENCEINTERVAL_3 "95% confidence interval (Z=1.96)\n95% confidence"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CONFIDENCEINTERVAL_4 "99% confidence interval (Z=2.58)\n99% confidence"
+    ID_CONFIDENCEINTERVAL_5 "99.9% confidence interval (Z=3.29)\n99.9% confidence"
+    ID_CONFIDENCEINTERVAL_6 "99.99% confidence interval (Z=3.89)\n99.99% confidence"
+    ID_CONFIDENCEINTERVAL_SIMPLE 
+                            "Confidence interval for single parameter\nSingle parameter confidence interval"
+    ID_CONFIDENCEINTERVAL_JOINT 
+                            "Confidence interval for A vs T(or R)\nA vs R confidence interval"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\ILT.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

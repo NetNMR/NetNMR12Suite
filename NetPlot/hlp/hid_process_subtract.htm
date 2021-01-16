@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P><A NAME="hid_process_subtract"></A><B>Subtract Dialog</B></P>
+
+
+
+<P>The <b>Subtract Dialog</b> is used to subtract a selected spectrum or spectra from
+all the spectra in the current document. This process will only work of all of the
+spectra in the current document have an identical window: offset, number of points and
+sweep-width. A spectrum selection list box is used to select one or more spectra. This
+selection represents the spectra to be subtracted from all the spectra in the current
+document. One or more spectra are selected by clicking on the labels. Clicking on a
+selected spectrum will remove it from selection. If more than one spectra is selected,
+then the average of the selected spectra will be used in the subtraction. Once the user
+has made the selection of the spectra to be subtracted, the subtraction process is
+initiated with the <b>Calculate</b> button:</P>
+
+<TABLE cols=2 width=900>
+
+<TR VALIGN="top">
+
+<TD width=18%>Calculate button</TD>
+
+<TD width=82%>The button will subtract the selected spectra from all of the spectra in
+the current document. If multiple spectra are selected, an average of the selected
+spectra will be used for the subtraction. Once selected, the label of this button will
+change to <b>Apply</b> and the button will appear to be in a pressed state. Pressing
+the button again will apply the subtraction to the dataset. This operation may not be
+able to be reversed. The subtraction process can be stopped by pressing the
+<b>Cancel</b> button that only appears when the <b>Caluclate</b> button has been
+pressed. There are two special cases:
+<p>If there are only two spectrum in the current document and only one has been selected
+for the subtraction operation, only the difference spectra will be shown after the calculate
+button is pressed (while this button displays <b>Apply</b>), but once the <b>Apply</b>
+is pressed the original two spectra will be retained and the difference will be shown.</p>
+<p>If there is only one spectrum selected in the list box and the <b>scale</b> constant
+is exactly 1.0, then the selected spectrum will be removed from the list of spectra once
+the <b>Apply</b> button has been pressed. The subtraction will result in all zeros for
+this spectrum, so there is no need to include it.</p></TD>
+</TR>
+<tr valign="top">
+
+<td width=18%>Scale Slider</td>
+
+<td width=82%>The scale slider is used to set a constant that the selected spectra are
+scaled by before subtraction. Any real value can be used. Text input boxes (which only
+accept real numbers) at the right and left of the slider are used to set the range of
+the slider. The slider is divided into 101 steps so by adjusting the left and right
+values, any real precision can be achieved. The default value of the slider range
+is from 0.9 to 1.1.</td>
+
+</tr>
+</TABLE>
+</BODY>
+</HTML>

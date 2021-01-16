@@ -1,0 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Modifying the Document)</TITLE>
+</HEAD>
+<BODY>
+<P><A NAME="hidr_doc1type"></A><B>Modifying the Document</B></P>
+<P>ILT is used to fit observed data to choice of different kernel functions. For a dissionof specific ILT kernel functions, see the <a href="hid_process_kerneltype.htm">Kernel</a> help file.Two different methodscan be used to fit the data. &quot;Inverse Laplace Transform&quot; uses non-negativeleast square, NNLS, to fit the observed data to an array of kernel curves. An alpha valuecan be specified. This will tend to broaden the distribution of terms each best fit terms. The<b>Wiscombe-Evans-Gragg-LeVeque</b> method iteratively selects new kernel terms to fit the observeddata. This process terminates when no more terms can be found which reduce the errorof the fit.</P>
+<p>Subsequent to ILT or WEGL fitting, functions exist to simplify the number of terms andthen optimize the parameter of the terms to minimize the errors of the calcualted data.These subsequent fitting functions are designed to allow the user to discover the fewestparameters (the simplest model) needed to fit the data. After using these function, errors arecalculated for the parameters of the remaining terms.</p><p>ILT displays the observed data. A logarithmic scale is used the for the X-values. If a fithas been calculated, a fit curve is displayed along with the errors. Once a fit is cacluated,the density function can optionally be displayed by using the<a href="hid_view_transform.htm">Transform</a> command in the View menu.</p><p>For the specific discussion of the fitting process, see the <a href="hid_process_ilt.htm">ILTProcess</a> menu command.</p>
+</BODY>
+</HTML>

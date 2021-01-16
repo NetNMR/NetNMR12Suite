@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE>NetPlot Display Mode</TITLE>
+</HEAD>
+<BODY>
+
+<p>The <i>NetPlot</i> display mode is set primarily with the
+<a href="hid_edit_parameters.htm">Parameters</a> dialog. There are three display modes:</p>
+
+<table>
+
+<tr>
+<td><b>None</b></td>
+<td>No axis is drawn in this mode. Each spectrum is exactly the same width on the plot
+and there is no offset according to the offset of each individual spectrum.</td>
+</tr>
+
+<tr>
+<td><b>PPM</b></td>
+<td>Includes an axis in PPM. Each spectrum is drawn in relaxation to the axis.</td>
+</tr>
+
+<tr>
+<td><b>Hertz</b></td>
+<td>Includes an axis in Hertz. Each spectrum is drawn in relation to the axis.</td>
+</tr>
+
+</table>
+
+<p>Once the display mode is set to either <b>PPM</b> or <b>Hertz</b>, a main cursor will
+track the mouse arrow. The main cursor is a vertical line drawn over all the spectra in
+the current document. The chemical shift of the main cursor position is listed in the
+status panel at the bottom of the window. In addition, the <a href="zoom_cursors.htm">zoom
+cursors</a> can then be set by click-drag-release action with the left mouse button.</p>
+
+<p>If all the spectra in the current document have identical sweep widths, spectrometer
+frequencies, offsets and number of points, regions can be selected and baselines corrected and
+integrals calculated over any number
+of regions with the <a href="hid_process_regions.htm">Regions dialog</a>, but only if the display
+mode is <b><i>not</i></b> set to <b>None</b>.</p>
+
+<p>If the <a href="hid_view_full.htm">Full</a> menu command (available in both the
+<a href="menu_view.htm">View Menu</a> and the <a href="menu_context.htm">Context Menu</a>)
+is executed in the <b>None</b> display mode, it will be changed to <b>PPM</b> automatically.</p>
+
+<p>There are special display modes associated with phasing and baseline correction. When using
+the <a href="hid_process_phase.htm">At Cursor</a> phasing command, the display only shows a single
+spectrum from the NetPlot document while the user adjusts the phase. In this mode, the cursor is
+hidden from the user and a special context menu is available for manual phase. For more information,
+see the How To... <a href="phasing.htm">manually phase an entire document</a>.</p>
+
+<p>After pressing the <b>Baseline:</b> <a href="hid_process_regions.htm">Calculate button</a>, the
+NetPlot will display calculated polynomial baseline corrections along with the spectra in the current
+NetPlot document.</p>
+
+<p>Another special display mode is when ajusting indivial spectrum Y-scale factors with the
+<a href="hid_process_yexpansion.htm">Y-Expansion dialog</a>. Anytime this dialog is displayed the
+<b>UP-Arrow</b>, <b>DOWN-Arrow</b> and the mouse wheel control the individual, selected spectrum
+Y-scale. Whenever this dialog is not display, these controls adjust the Y-scale of all the spectra.</p>
+
+
+</BODY>
+</HTML>

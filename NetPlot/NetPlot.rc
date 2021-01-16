@@ -1,0 +1,913 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\NetPlot.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NetPlot.ico"
+IDR_NetPlotTYPE         ICON                    "res\\NetPlotDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_ADD
+    SEPARATOR
+    BUTTON      ID_PROCESS_PROCESS
+    BUTTON      ID_PROCESS_PHASE
+    BUTTON      ID_PROCESS_SUBTRACT
+    BUTTON      ID_PROCESS_REGIONS
+    BUTTON      ID_PROCESS_YEXPANSION
+    SEPARATOR
+    BUTTON      ID_EDIT_PARAMETERS
+    BUTTON      ID_VIEW_AUTOMATIC
+    BUTTON      ID_VIEW_GLOBAL
+    BUTTON      ID_Y_X1
+    BUTTON      ID_EDIT_LABELS
+    SEPARATOR
+    BUTTON      ID_EDIT_COLORS
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+    SEPARATOR
+    BUTTON      ID_VIEW_PORT
+    BUTTON      ID_VIEW_LANDSCAPE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About NetPlot...",           ID_APP_ABOUT
+    END
+END
+
+IDR_NetPlotTYPE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Add...\tCtrl+A",             ID_FILE_ADD
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_MYSAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Colors...\tCtrl+Shft+C",      ID_EDIT_COLORS
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Labels...\tCtrl+L",          ID_EDIT_LABELS
+        MENUITEM "&Parameters ...\tCtrl+P",     ID_EDIT_PARAMETERS
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Zoom",                       ID_VIEW_ZOOM
+        MENUITEM "&Full",                       ID_VIEW_FULL
+        MENUITEM "&Auto Arrange",               ID_VIEW_AUTOMATIC
+        POPUP "Y-Scale"
+        BEGIN
+            MENUITEM "&Global",                     ID_VIEW_GLOBAL, CHECKED
+            MENUITEM "&Individual",                 ID_PROCESS_YEXPANSION
+            MENUITEM SEPARATOR
+            MENUITEM "&Up",                         ID_Y_UP
+            MENUITEM "&Down",                       ID_Y_DOWN
+            MENUITEM "&x1",                         ID_Y_X1
+        END
+        MENUITEM "&Data Classification",        ID_VIEW_DATACLASS
+        MENUITEM SEPARATOR
+        MENUITEM "&Portrait",                   ID_VIEW_PORT, CHECKED
+        MENUITEM "&Landscape",                  ID_VIEW_LANDSCAPE
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Process"
+    BEGIN
+        MENUITEM "&Process",                    ID_PROCESS_PROCESS
+        MENUITEM "P&hase",                      ID_PROCESS_PHASE
+        MENUITEM "&Subtract",                   ID_PROCESS_SUBTRACT
+        MENUITEM "&Regions",                    ID_PROCESS_REGIONS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About NetPlot...",           ID_APP_ABOUT
+    END
+END
+
+IDR_CONTEXTMENU MENU
+BEGIN
+    POPUP "context"
+    BEGIN
+        MENUITEM "Zoom",                        ID_VIEW_ZOOM
+        MENUITEM "Full",                        ID_VIEW_FULL
+        POPUP "Y-scale"
+        BEGIN
+            MENUITEM "Up",                          ID_Y_UP
+            MENUITEM "Down",                        ID_Y_DOWN
+            MENUITEM "x1",                          ID_Y_X1
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Set Offset Here",             ID_CONTEXT_SETOFFSETHERE
+        MENUITEM SEPARATOR
+        MENUITEM "Single Point Region",         ID_CONTEXT_SINGLEPOINTINTEGRAL
+        MENUITEM "Add Region",                  ID_INTEGRAL_ADDINTEGRAL
+        MENUITEM "Remove Region",               ID_INTEGRAL_REMOVEINTEGRAL
+        MENUITEM "Clear All Regions",           ID_INTEGRAL_CLEARALL
+        POPUP "Fit Iintegrals by"
+        BEGIN
+            MENUITEM "Excel",                       ID_INTEGRAL_FITINTEGRALS
+            MENUITEM "ILT",                         32828
+        END
+    END
+    POPUP "LeftPhase"
+    BEGIN
+        MENUITEM "&Right Cursor\tR",            IDC_RIGHTPHASEBUTTON
+        MENUITEM "Stop Phasing\tC",             IDC_ATCURSORCHECK
+        MENUITEM "Blow Up\tU",                  IDC_UPBUTTON
+        MENUITEM "Shrink &Down\tD",             IDC_DOWNBUTTON
+        MENUITEM "Reset\tT",                    IDC_UNDOPHASEBUTTON
+        MENUITEM "Move to spec above\tQ",       IDC_SPECUPBUTTON
+        MENUITEM "Move to spec below\tZ",       IDC_SPECDOWNBUTTON
+    END
+    POPUP "RightPhase"
+    BEGIN
+        MENUITEM "&Left Cursor\tL",             IDC_LEFTPHASEBUTTON
+        MENUITEM "Stop Phasing\tC",             IDC_ATCURSORCHECK
+        MENUITEM "Blow &Up\tU",                 IDC_UPBUTTON
+        MENUITEM "Shrink &Down\tD",             IDC_DOWNBUTTON
+        MENUITEM "Rese&t\tT",                   IDC_UNDOPHASEBUTTON
+        MENUITEM "Move to spec above\tQ",       IDC_SPECUPBUTTON
+        MENUITEM "Move to spec below\tZ",       IDC_SPECDOWNBUTTON
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    "C",            ID_EDIT_COLORS,         VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_EDIT_LABELS,         VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_EDIT_PARAMETERS,     VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_FILE_ADD,            VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, SHIFT, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "D",            ID_Y_DOWN,              VIRTKEY, NOINVERT
+    VK_DOWN,        ID_Y_DOWN,              VIRTKEY, NOINVERT
+    "U",            ID_Y_UP,                VIRTKEY, NOINVERT
+    VK_UP,          ID_Y_UP,                VIRTKEY, NOINVERT
+    VK_HOME,        ID_Y_X1,                VIRTKEY, NOINVERT
+    "C",            ID_EDIT_DATACLASS,      VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 187, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NetPlot"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "NetPlot",IDC_VERSIONSTATIC,36,14,144,8,SS_NOPREFIX
+    CTEXT           "Copyright © 2007 by Thomas A. Early",IDC_STATIC,7,32,173,8
+    DEFPUSHBUTTON   "OK",IDOK,137,55,43,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,21,20
+END
+
+IDD_FILEDIALOG DIALOGEX 0, 0, 370, 189
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File Selection"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_SERVERLIST,7,12,141,69,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_DIRLIST,7,101,141,80,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Current Path",IDC_CURRENTPATH,157,0,206,9
+    LISTBOX         IDC_FILELIST,154,12,209,130,LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Move &Up",IDC_MOVEUP,156,148,48,14,WS_DISABLED
+    PUSHBUTTON      "Move &Down",IDC_MOVEDOWN,209,148,48,14,WS_DISABLED
+    PUSHBUTTON      "&Remove",IDC_REMOVE,262,148,48,14,WS_DISABLED
+    PUSHBUTTON      "Remove &All",IDC_REMOVEALL,315,148,48,14,WS_DISABLED
+    PUSHBUTTON      "TBD",IDC_ADDBUTTON,156,168,48,14
+    PUSHBUTTON      "Cancel",IDCANCEL,262,168,48,14
+    DEFPUSHBUTTON   "OK",IDOK,315,168,48,14
+    LTEXT           "NMR Servers:",IDC_STATIC,11,3,46,8
+    LTEXT           "Directories and Files:",IDC_STATIC,10,91,66,8
+    LTEXT           "Drive:",IDC_STATIC,85,87,26,9,0,WS_EX_RIGHT
+    COMBOBOX        IDC_DRIVECOMBO,113,85,36,97,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Re&verse All",IDC_REVERSE,208,168,49,14,WS_DISABLED
+END
+
+IDD_PARAMETERS DIALOGEX 0, 0, 304, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Plot Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Title",IDC_STATIC,7,6,290,28
+    EDITTEXT        IDC_TITLE,12,17,277,12,ES_AUTOHSCROLL
+    GROUPBOX        "Plot Range",IDC_STATIC,7,38,133,47
+    CONTROL         "None",IDC_RANGEFULL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,21,52,31,8
+    CONTROL         "&Hertz",IDC_RANGEHERTZ,"Button",BS_AUTORADIOBUTTON,59,52,30,8
+    CONTROL         "&PPM",IDC_RANGEPPM,"Button",BS_AUTORADIOBUTTON,99,52,28,8
+    LTEXT           "&From:",IDC_FROMPROMPT,14,69,17,8
+    EDITTEXT        IDC_RANGEFROM,35,67,36,12,ES_AUTOHSCROLL
+    LTEXT           "&To:",IDC_TOPROMPT,84,69,11,8
+    EDITTEXT        IDC_RANGETO,99,67,36,12,ES_AUTOHSCROLL
+    GROUPBOX        "Spectrum Size  and Offset (cm)",IDC_STATIC,145,38,152,47
+    LTEXT           "&Width:",IDC_STATIC,158,50,22,8
+    EDITTEXT        IDC_SIZECX,183,48,36,12,ES_AUTOHSCROLL
+    LTEXT           "&Height:",IDC_STATIC,230,50,23,9
+    EDITTEXT        IDC_SIZECY,256,48,36,12,ES_AUTOHSCROLL
+    LTEXT           "&Offset X:",IDC_STATIC,152,69,27,8
+    EDITTEXT        IDC_OFFSETX,183,67,36,12,ES_AUTOHSCROLL
+    LTEXT           "Offse&t Y:",IDC_STATIC,225,69,27,8
+    EDITTEXT        IDC_OFFSETY,256,67,36,12,ES_AUTOHSCROLL
+    GROUPBOX        "Label",IDC_STATIC,7,87,290,28
+    LTEXT           "&Name:",IDC_STATIC,13,99,20,8
+    COMBOBOX        IDC_LABELCOMBO,41,97,68,84,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Offset &X:",IDC_LABELXPROMPT,126,99,28,8
+    EDITTEXT        IDC_LABELX,159,97,36,12,ES_AUTOHSCROLL
+    LTEXT           "Offset &Y:",IDC_LABELYPROMPT,216,99,27,8
+    EDITTEXT        IDC_LABELY,248,97,36,12,ES_AUTOHSCROLL
+    GROUPBOX        "Font Size",IDC_STATIC,7,118,290,25
+    RTEXT           "Title:",IDC_STATIC,25,130,24,8
+    COMBOBOX        IDC_TITLEFONTCOMBO,53,127,32,67,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Labels:",IDC_STATIC,112,130,24,8
+    COMBOBOX        IDC_LABELFONTCOMBO,140,127,32,67,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Axis:",IDC_STATIC,198,130,24,8
+    COMBOBOX        IDC_AXISFONTCOMBO,227,127,32,67,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Auto Arrange",IDC_AUTOARRANGE,9,148,60,14
+    CONTROL         "&Global Scaling",IDC_GLOBALSCALING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,111,151,58,9
+    LTEXT           "Y &Expansion Factor:",IDC_STATIC,193,151,64,8
+    EDITTEXT        IDC_YEXPANSION,261,148,36,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,189,167,50,14
+    DEFPUSHBUTTON   "OK",IDOK,247,167,50,14
+END
+
+IDD_COLORDLG DIALOGEX 0, 0, 326, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Colors"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Spectra:",IDC_STATIC,7,7,312,29
+    CONTROL         "All",IDC_ALLCOLORCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,20,20,8
+    COMBOBOX        IDC_CSPECTRUMCOMBO,42,17,213,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SCOLORCOMBO,262,17,52,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Integral:",IDC_STATIC,15,41,33,9
+    COMBOBOX        IDC_INTEGRALCOLORCOMBO,52,39,52,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Axis:",IDC_STATIC,113,41,32,9
+    COMBOBOX        IDC_AXISCOLORCOMBO,149,39,52,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Background:",IDC_STATIC,210,41,48,9
+    COMBOBOX        IDC_BACKGROUNDCOLORCOMBO,262,39,52,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Baseline:",IDC_STATIC,14,60,34,9
+    COMBOBOX        IDC_BASELINECOLORCOMBO,91,58,52,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Title:",IDC_STATIC,174,60,27,9
+    COMBOBOX        IDC_TITLECOLORCOMBO,205,57,52,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Main Cursor:",IDC_STATIC,39,79,48,9
+    COMBOBOX        IDC_MAINCURSORCOLORCOMBO,91,76,52,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Zoom Cursors:",IDC_STATIC,153,78,48,9
+    COMBOBOX        IDC_ZOOMCURSORCOLORCOMBO,205,76,52,70,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Black on White",IDC_BLKONWHTBUTTON,7,97,63,14
+    PUSHBUTTON      "White on Black",IDC_WHTONBLKBUTTON,99,97,63,14
+    PUSHBUTTON      "Cancel",IDCANCEL,205,97,50,14
+    DEFPUSHBUTTON   "OK",IDOK,269,97,50,14
+END
+
+IDD_LABELS DIALOGEX 0, 0, 243, 206
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Spectrum Labels"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,186,185,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,127,185,50,14
+    EDITTEXT        IDC_LABELSEDIT,7,7,229,170,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL
+    COMBOBOX        IDC_LABELSIZECOMBO,59,186,33,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Font Size:",IDC_STATIC,7,189,46,10
+END
+
+IDD_PROCESS_PAGE DIALOGEX 0, 0, 210, 154
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Process"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "DC Level",IDC_DCLEVELBUTTON,7,7,50,14
+    PUSHBUTTON      "Truncate",IDC_TRUNCATEBUTTON,7,32,50,14
+    PUSHBUTTON      "Apodize",IDC_APODIZEBUTTON,7,58,50,14
+    COMBOBOX        IDC_APOSHAPECOMBO,64,58,50,55,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_APOVALUECOMBO,119,57,39,90,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_APOUNITCOMBO,164,57,39,39,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Zerofill",IDC_ZEROBUTTON,7,83,50,14
+    PUSHBUTTON      "FT",IDC_FTBUTTON,7,108,50,14
+END
+
+IDD_PHASE_PAGE DIALOGEX 0, 0, 210, 154
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Phase"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Apply to:",IDC_STATIC,7,7,196,31
+    CONTROL         "All",IDC_AllCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,20,23,10
+    COMBOBOX        IDC_PHASESELECTCOMBO,40,18,156,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Clone Phase:",IDC_STATIC,7,39,196,32
+    PUSHBUTTON      "All others",IDC_CLONEBUTTON,22,50,50,14
+    PUSHBUTTON      "Up",IDC_CLONEUPBUTTON,82,50,50,14
+    PUSHBUTTON      "Down",IDC_CLONEDOWNBUTTON,143,50,50,14
+    PUSHBUTTON      "Auto A Only",IDC_PHASEAUTOABUTTON,22,75,50,14
+    PUSHBUTTON      "Magnitude",IDC_MAGNITUDEBUTTON,83,75,50,14
+    CONTROL         "At &Cursor",IDC_ATCURSORCHECK,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,143,75,49,14
+    PUSHBUTTON      "Auto A &&& B",IDC_PHASEAUTOABBUTTON,22,93,50,14
+    PUSHBUTTON      "&Up",IDC_UPBUTTON,7,133,21,14,NOT WS_VISIBLE
+    PUSHBUTTON      "&Down",IDC_DOWNBUTTON,28,133,25,14,NOT WS_VISIBLE
+    PUSHBUTTON      "&Left",IDC_LEFTPHASEBUTTON,53,133,22,14,NOT WS_VISIBLE
+    PUSHBUTTON      "&Right",IDC_RIGHTPHASEBUTTON,75,133,26,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Rese&t",IDC_UNDOPHASEBUTTON,101,133,29,14,NOT WS_VISIBLE
+    PUSHBUTTON      "&Q",IDC_SPECUPBUTTON,130,133,22,14,NOT WS_VISIBLE
+    PUSHBUTTON      "&Z",IDC_SPECDOWNBUTTON,151,133,22,14,NOT WS_VISIBLE
+    LTEXT           "<Q> goto spectrum above <Z> goto spectrum below <C> complete phase <L> move to left cursor <R> move to right cursor <U> blow up spectrum <D> shrink down spectrum <T> reset <LEFT MOUSE BUTTON> toggles between cursors <RIGHT MOUSE BUTTON> phase menu",IDC_PHASEPROMPTSTATIC,7,107,196,41,NOT WS_VISIBLE
+END
+
+IDD_REGIONS_PAGE DIALOGEX 0, 0, 210, 154
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Regions"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Region:",IDC_STATIC,7,7,196,32
+    PUSHBUTTON      "Add",IDC_ADDREGIONBUTTON,15,17,50,14
+    PUSHBUTTON      "Clear",IDC_CLEARREGIONBUTTON,80,17,50,14
+    PUSHBUTTON      "Clear All",IDC_CLEARALLREGIONBUTTON,143,17,50,14
+    GROUPBOX        "Baseline:",IDC_STATIC,7,49,196,30
+    LTEXT           "Order:",IDC_STATIC,12,62,22,8
+    COMBOBOX        IDC_BASELINEORDERCOMBO,36,61,31,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Calculate",IDC_CALCULATEBASELINECHECK,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,80,59,50,14
+    PUSHBUTTON      "Cancel",IDC_BASELINEQUITBUTTON,153,59,35,14,NOT WS_VISIBLE
+    GROUPBOX        "Analyze integral by:",IDC_STATIC,7,94,196,29
+    PUSHBUTTON      "Excel®",IDC_FITINTEGRALBUTTON,44,104,50,14
+    PUSHBUTTON      "ILT",IDC_ILTINTEGRALBUTTON,101,104,50,14
+END
+
+IDD_OFFSETDIALOG DIALOGEX 0, 0, 135, 51
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,78,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,78,30,50,14
+    LTEXT           "Offset in PPM:",IDC_OFFSETSTATIC,7,14,69,11
+    EDITTEXT        IDC_OFFSETEDIT,7,30,55,14,ES_AUTOHSCROLL
+END
+
+IDD_YEXPAND_PAGE DIALOGEX 0, 0, 210, 154
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Y-Expansion"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_YEXPANDSELECTCOMBO,16,64,174,86,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Reset All",IDC_YEXPANDRESETBUTTON,69,108,62,15
+    EDITTEXT        IDC_YEXPANDEDIT,102,86,56,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Change",IDC_YEXPANDUPDATEBUTTON,41,87,50,14
+    GROUPBOX        "Individual Y-scale factor",IDC_STATIC,7,7,196,123
+    CONTROL         "Global",IDC_GLOBALCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,88,133,35,14
+    LTEXT           "After selecting an individual spectrum in the drop-down box below, click on the display page and use the up-arrow, down-arrow or mouse wheel to adjust the scaloe of just that spectrum. Or you can type in a value and press the ""Change"" button.",IDC_STATIC,15,17,178,41
+END
+
+IDD_SUBTRACT_PAGE DIALOGEX 0, 0, 210, 154
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Subtract"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LISTBOX         IDC_SUBTRACTLIST,7,7,136,91,LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    CONTROL         "Calculate",IDC_SUBTRACTCHECK,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,153,41,50,14
+    PUSHBUTTON      "Cancel",IDC_SUBTRACTCANCELBUTTON,153,68,50,14,NOT WS_VISIBLE
+    GROUPBOX        "Multiplier",IDC_SUBTRACTGROUPSTATIC,7,100,196,47,NOT WS_VISIBLE
+    EDITTEXT        IDC_LEFTEDIT,11,111,28,13,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "From",IDC_SUBTRACTFROMSTATIC,42,113,23,8,NOT WS_VISIBLE
+    CTEXT           "Static",IDC_SUBTRACTSTATIC,75,113,63,10,NOT WS_VISIBLE
+    RTEXT           "To",IDC_SUBTRACTTOSTATIC,145,113,23,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_RIGHTEDIT,171,111,28,13,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         "",IDC_SUBTRACTSLIDER,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | NOT WS_VISIBLE | WS_TABSTOP,14,125,182,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 8,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "For processing and plotting multiple NMR data files"
+            VALUE "CompanyName", "Thomas A. Early"
+            VALUE "FileDescription", "NetPlot Application"
+            VALUE "FileVersion", "8.0.0.0"
+            VALUE "InternalName", "NetPlot"
+            VALUE "LegalCopyright", "Copyright © 2016 by Thomas A. Early. All rights reserved."
+            VALUE "OriginalFilename", "NetPlot.exe"
+            VALUE "ProductName", "NetPlot Application"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_FILEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 363
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_PARAMETERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_COLORDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_LABELS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_PROCESS_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_PHASE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_REGIONS_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_OFFSETDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 44
+    END
+
+    IDD_YEXPAND_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_SUBTRACT_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROCESS_PAGE DLGINIT
+BEGIN
+    IDC_APOSHAPECOMBO, 0x403, 11, 0
+0x6f4c, 0x6572, 0x746e, 0x697a, 0x6e61, "\000" 
+    IDC_APOSHAPECOMBO, 0x403, 9, 0
+0x6147, 0x7375, 0x6973, 0x6e61, "\000" 
+    IDC_APOVALUECOMBO, 0x403, 5, 0
+0x2e30, 0x3532, "\000" 
+    IDC_APOVALUECOMBO, 0x403, 4, 0
+0x2e30, 0x0035, 
+    IDC_APOVALUECOMBO, 0x403, 2, 0
+0x0031, 
+    IDC_APOVALUECOMBO, 0x403, 2, 0
+0x0032, 
+    IDC_APOVALUECOMBO, 0x403, 2, 0
+0x0035, 
+    IDC_APOVALUECOMBO, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_APOVALUECOMBO, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_APOUNITCOMBO, 0x403, 3, 0
+0x7a48, "\000" 
+    IDC_APOUNITCOMBO, 0x403, 4, 0
+0x5050, 0x004d, 
+    0
+END
+
+IDD_REGIONS_PAGE DLGINIT
+BEGIN
+    IDC_BASELINEORDERCOMBO, 0x403, 2, 0
+0x0032, 
+    IDC_BASELINEORDERCOMBO, 0x403, 2, 0
+0x0033, 
+    IDC_BASELINEORDERCOMBO, 0x403, 2, 0
+0x0034, 
+    IDC_BASELINEORDERCOMBO, 0x403, 2, 0
+0x0035, 
+    IDC_BASELINEORDERCOMBO, 0x403, 2, 0
+0x0036, 
+    IDC_BASELINEORDERCOMBO, 0x403, 2, 0
+0x0037, 
+    IDC_BASELINEORDERCOMBO, 0x403, 2, 0
+0x0038, 
+    IDC_BASELINEORDERCOMBO, 0x403, 2, 0
+0x0039, 
+    IDC_BASELINEORDERCOMBO, 0x403, 3, 0
+0x3031, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "NetPlot"
+    IDR_NetPlotTYPE         "\nNetPlot\nNetPlot\nNetPlot Files (*.npl)\n.npl\nNetPlot.Document\nNetPlot.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "NetPlot"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_ADD             "Manage spectrum files.\nManage Spectra"
+    ID_VIEW_PORT            "Portrait mode\nPortrait"
+    ID_VIEW_LANDSCAPE       "Landscape mode\nLandscape"
+    ID_EDIT_COLORS          "Edit page colors.\nColors"
+    ID_EDIT_PARAMETERS      "Edit parameters\nParameters"
+    ID_EDIT_LABELS          "Edit labels on each spectrum\nEdit spectrum labels"
+    ID_FILE_MYSAVEAS        "Save the active document with a new name\nSave As"
+    ID_VIEW_ZOOM            "Change the display range to the zoom cursors\nChange range"
+    ID_VIEW_FULL            "Change the display range to full\nChange range to max"
+    ID_INTEGRAL_ADDINTEGRAL "Add the region between the zoom cursors\nAdd region"
+    ID_INTEGRAL_REMOVEINTEGRAL 
+                            "Remove the integal region between the zoom cursors\nRemove region"
+    ID_INTEGRAL_CLEARALL    "Clear all integral regions\nClear all regions"
+    ID_CONTEXT_SINGLEPOINTINTEGRAL 
+                            "Add a single point at the main cursor to the integral\nPoint at cursor added to integral"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INTEGRAL_FITINTEGRALS 
+                            "Send integrals to spreadsheet analysis\nSpreadsheet analysis"
+    ID_CURSOR_DIFFERENCE    "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    ID_Y_UP                 "Increase Y-expansion\nIncrease Y-expansion"
+    ID_Y_DOWN               "Decrease Y-expansion\nDecrease Y-expansion"
+    ID_Y_X1                 "Set Y-expansion to 1.0\nY-expansion=1"
+    ID_PROCESS_PROCESS      "Basic processing of 1D data\nBasic processing"
+    ID_PROCESS_PHASE        "Phasing 1D data\nPhase"
+    ID_PROCESS_SUBTRACT     "Spectrum subtraction\nSubtraction"
+    ID_PROCESS_REGIONS      "Region based processing\nBaseline and integral"
+    ID_PROCESS_YEXPANSION   "Ajust Y-Expansion of indivual spectra\nY-expansion"
+    ID_VIEW_AUTOMATIC       "Auto arrange display parameters\nAuto arrange parameters"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_GLOBAL          "Global or local scaling\nglobal or local scaling"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_DATACLASS       "Display the  data classification on the document\nShow data classification"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\NetPlot.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

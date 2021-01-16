@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+	<HEAD>
+		<TITLE>(Edit Fit command)</TITLE>
+		<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+	</HEAD>
+	<BODY>
+		<P><A NAME="hid_edit_fit"></A><B>Fit command (Edit menu)</B></P>
+		<P>This dialog is used to fit the lines to the spectra in the current document.</P>
+		<P><IMG alt="fit dialog" src="images/fit.gif"></P>
+		<P>The Fit dialog is used to automatically (using an iterative non-linear least 
+			squares or downhill simplex) optimize line parameters to minumize standard error
+			of the fit. While least-squares is generally faster, it is more prone to blowing
+			up. During the iterations, a parameter correction will become too large because
+			of the non-linear line functions and the current solution will be moved to a
+			place in parameter space where it cannot recover. In this case, the residual error
+			will increase, sometimes dramatically. Another problem with least squares is that
+			sometimes the optimization will oscillate between two or three solutions and so
+			will never reach the required tolerance. Downhill simplex will find at
+			least a local minimum, as long as enough iterations are preformed. Residual errors
+			will never increase during a simplex optimization. Downhill dimplex will usually
+			take many iterations to find that minimum.</P>
+		<p>When the method is switched between least squares and simplex, the iteration maximum
+		    will be automatically adjusted to 100 or 100,000 respectively. If the iteration
+		    count has been exceded you can restart the optimization. This would only make
+		    sense if the previous attempt looked promising. Please note that no parameter errors
+		    will be calculated if performing a simplex optimization. After a sucessful simplex
+		    optimization, least squares optimiation can then be applied to solution if you
+		    need parameter errors. In this case, it would be a good idea to save the solution
+		    after the simplex optimization, just in case the least squares optimization blows
+		    up.</p>
+		<P>	
+			All the 
+			line shapes can be forced to 100% Lorentzian or 100% Gaussian with the check 
+			boxes. The Lineshape Reset button will return all lineshapes to 50% Lorentzian 
+			and enable their optimizations. If during the optimization process <EM>NetSpan</EM>
+			calculated a lineshape to have 0% or 100% Lorentzian, that lineshape will 
+			no longer be enabled in the optimization process. No statistical error will be 
+			listed for this lineshape in the output.</P>
+		<P>Baselines for each spectrum can have one (simple DC level) to four (cubic 
+			polynomial) parameters. Chose "1" or "2" if NMR lines occupy a large fraction 
+			of the current region. Only use "3" or "4" if there is obvious curvature in the 
+			baseline, otherwise calculated peak heights may be compromised. The calculated 
+			baseline coefficients have no intrinsic value to the simulation and are not 
+			displayed in the output.</P>
+		<P>The optimization limits are set in the "Tolerance" and "Iterations" edit items. 
+			Tolerance is the fraction of change in the standard error with each 
+			iteration. The value shown is usually appropriate for most data. For well 
+			behaved data using the least-squares method, optimization is usually achieved
+			in 25 iterations or less. For Simplex, optimization will typically require
+			tens of thousands of iterations. In 
+			some cases the tolerance will not be achieved within the specified number of 
+			iterations and a error dialog will be displayed.</P>
+		<P>Upon sucessful optimization, a dialog will be displayed that shows the optimized 
+			parameters with errors (for a least squares fit). The user can then print these results, copy the text to 
+			the clipboard, or launch an different programs that can fit the integrals to one of 
+			several relaxation functions. Excel&reg; can be used to fit simple single or double
+			exponentials. More complex analysis can be performed by inverse LaPlace transform using
+			the NetNMR Application Suite program <i>ILT</i>.
+			Since these fitting programs are designed to fit
+			integral intensities, the button to launch the analysis programs will only be enabled
+			if you are fitting at least four spectra.
+		</P>
+	</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta name="GENERATOR" content="Microsoft Visual Studio 8.0"/>
+<title>Ribbon Integral Tab</title>
+</head>
+<body>
+<p>Integral regions are set and cleared using the zoom cursors. You can first set the zoom cursors around a region
+you want to integrate and the press the mouse context button and select the <b>Add Integral</b> or <b>Clear
+Integral</b> menu item. A short-cut also exists for setting and clearing integrals: Hold down The Shift or Control
+key while setting the zoom cursors to respectively set or clear an integral region.</p>
+<p>Integrals in a spectrum can be normalized to any value by moving the cross-hairs cursor to a current integral
+region and clicking the mouse context button and then selecting the <b>Set Integral</b> menu item. You will then
+be promted for a value. Once set, this will set the global integral constant within this session of <i>Net12NMR</i>.
+Any NMR files opened subsequently will use this integration constant to display any integrals. Also, when you set
+an integral value, <i>Net12NMR</i> will remember the exact index of the right edge of the integral region that
+you used to set the integation constant.</p>
+<p>Command buttons in the <b>Choose Integral</b> pane on this ribbon tab will set and clear integral regions of the
+active spectrum. The <b>Add Integral</b> and the <b>Remove Integral</b> buttons operate on the region of the displayed
+spectrum between the zoom cursors. The <b>Clear All Integrals</b> will remove all integral regions of the current
+spectrum, even if those region are outside the current displayed area.</p>
+<p>Internally, <i>Net12NMR</i> always calculates integrals from the actual floating point values in the spectrum
+array. The displayed integral values are modified by multiplying by a normalization constant that is alway greater
+than zero. There are two normalization constants that can be used to display the values of the integrals, a local
+normalization constant and a global normalization constant. The global normalization constant is initialized to 
+1.0 at the start of each <i>Net12NMR</i> session. The local normalization constant is a <i>Net12NMR</i> data file
+paramater stored with each .nmrx file and is initialized to 1.0 when the file is first created. A checkbox in the
+&quot;Normalization&quot; pane allows you to choose which normalization constant to use. This checkbox is a
+<b>Net12NMR</b> file parameter, so changing this checkbox will mark the file as having changed.(Even if you return
+to the original state the, the file will still be marked as having changed.) There are also button in this
+pane to copy the normalization constants back and forth and they will automatically check or uncheck the <b>Use
+Global</b> checkbox. These buttons will only be active when you are using the &quot;copy from&quot; normalization
+constant. These button will not be active if the two normalization constants are equal.</p>
+<p>You can copy the integral regions to and from the <a href="ribbon_tab_shelf.htm">Processing Shelf</a> with the
+two command buttons in the <b>Process Shelf</b> pane. Ordinarily, an integral Process Shelf item has only two
+numeric values, the PPM values of the integral region. However, if the index of the right most point of a integral
+region corresponds to the value that was used to set the current integration constant, that integral Processing
+Shelf item will have a third numeric value that is its integration value. If you pull the integral regions from
+the Processing Shelf, then the global integration constant will be set to five the same integral over that
+region.</p>
+<p>Selecting this tab on the Ribbon will automatically select the &quot;Integral&quot; tab of the
+<a href="output_window.htm">Output Window</a>.</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta name="GENERATOR" content="Microsoft Visual Studio 8.0"/>
+<title>Ribbon Shelf Tab</title>
+</head>
+<body>
+<p>The &quot;Shelf&quot; is a holding area for region storage for the <a href="ribbon_tab_baseline.htm">Baseline</a>,
+<a href="ribbon_tab_peaks.htm">Peak Picking</a> and <a href="ribbon_tab_integral.htm">Integral</a> processing tabs.
+While the region information for these three processes are stored as integer from-to indexes, from-to regions on the
+Shelf are stored in PPM values. This allows you to use a process shelf from one spectrum and apply those same
+regions to another spectrum, even if the data was collected with a different offset or spectrum width.</p>
+<p>The <b>Status</b> pane is a read-only pane that display the number of baseline, peak and integral regions
+currently on the shelf.</p>
+<p>When you select the Shelf tab, the &quot;Shelf&quot; tab of the <a href="output_window.htm">Output Window</a>
+will be automatically displayed. This tab of the Output Window shows the entire contents of the shelf in a format
+consistent with the ASCII form of the Shelf.</p>
+<p>The <b>Clear Shelf</b> pane contains buttons for clearing the shelf of baseline regions, peak thresholds and
+integral regions. Clearing the shelf of these items will not clear any regions of open <i>Net12NMR</i>
+documents.</p>
+<p>The <b>Storage</b> pane containes buttons to save the shelf to an ASCII file, or load saved shelf data to
+<i>Net12NMR</i>. Since the processing shelf is stored as an ASCII file you can edit it once it has been saved.</p>
+<p>The format for the shelf ASCII file is simple. Each line describes a region with either three or four parameters.
+The parameters are separated by white-space. The first parameter is a single upper case letter, &quot;B&quot;,
+&quot;P&quot; or &quot;I&quot; for a baseline, peak-picking or integral region, respectively. The next two parameters
+are the from-to region in PPM units. Baseline regions have no forth parameter while the fourth parameter for a
+peak-picking region is the height of the peak threshold for that region, expressed as a fraction of the full range
+of the dataset. If a fourth parameter is specified for an integral range, the spectrum integral is normalized with
+that value and so can be any real value greater than zero. Specifying more than one forth parameter for an integral
+region will result in just one normalization that is choosen by the software.</p>
+<p>The <b>Save Shelf</b> command button will prompt you for a filename and location.</p>
+<p>Reading a shelf file with the <b>Load Shelf</b> button will clear any previous contents of the shelf.</p>
+</body>
+</html>

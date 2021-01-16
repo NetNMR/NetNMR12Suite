@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE>Fit Integral Command</TITLE>
+</HEAD>
+<BODY>
+
+<p>Fit Integrals Command (Integral Menu)</p>
+
+<p>If there are integrals in the current display, they will be calculated for each spectrum in
+the current NetPlot document. These integral values will then be transferred to a new spreadsheet
+workbook. A
+spreadsheet macro (that is in another hidden workbook)
+will allow the integral data for each spectrum to be fit to a user selected function (model). The
+integrals from each region defined with the <a href="hid_integral_addintegral.htm">Add Integral</a>
+Command become the y-values. The x-values are take from the <a href="hid_edit_labels.htm">
+spectrum labels</a>. In the case of a relaxation experiment, the <a href="hid_edit_parameters.htm">
+Parameter Dialog</a> can be used to specify the specta labels from a
+header variable name that contains the correct
+relaxation parameter. (Sometimes the relaxation value is "d2" on Varian systems or "vd" on Bruker
+system.)</p>
+
+<p>The speadsheet macro in the hidden workbook
+will automatically build a new menu item called "NMR". In the NMR menu is a "Fit Integrals"
+command that will build a spreadsheet around the pasted integral data that came from NetPlot.
+This will construct a new worksheet that will use one of several
+different user-selected modelling functions to fit the x <i>vs.</i> y data. Each integral in the
+current display will have a separate, parameterized model constructed. The "Solver" speadsheet
+command can then be used to minumize the error between the observed integral data and the selected
+model by varying the model parameters. In addtion to a standard error calculation for each integral
+region as well as the total standard error for all regions. Standard errors for each parameter are
+also calculated and displayed in the workbook.</p>
+
+<p>The hidden workbook doing all the work is the same one used to fit calculated integrals
+in NetSpan.</p>
+
+<p>This command will only be active if there are defined integral regions in the current display.</p>
+
+</BODY>
+</HTML>

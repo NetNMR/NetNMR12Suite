@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE>Edit Colors command</TITLE>
+</HEAD>
+<BODY>
+
+<P>Use this command to change the colors that are used to generate the <i>NetPlot</i> document.  Buttons
+are available to quickly change the display color to white on a black background or
+black on a white background.  When the display is <A href="hid_edit_copy.htm">copied
+to the clipboard</A>, everything
+but the background and the main and <a href="zoom_cursors.htm">zoom cursors</a>
+are copied as displayed.</P>
+
+<p>Because the colors for the main and zoom cursors are generated statically and these
+colors depend on the backgound color, these cursors may not be displayed properly once
+their colors (or the background color) are changed until NetPlot is restarted.</p>
+
+<p>You can also control the colors of individual spectra from this dialog. You can
+also easily change all the spectra to the same color. Spectrum labels will have the
+same color as the spectra themselves.</p>
+
+<P>For historical reasons, different color information is stored in different locations.
+Spectrum colors are stored with the <i>NetPlot</i> document. All other colors, like the
+title and axis colors, as well as the cursor and background colors are stored in the
+Windows Registry. Any change in these Registry-stored colors immediately updates the
+Registry. Because of this, it is possible to open a NetPlot document that was displaying
+properly when it was saved and the
+spectrum color saved with that document is identical to the current background color,
+in which case it will be unobservable.</P>
+
+<p>The <a href="accelerator.htm">accelerator</a> for this command is the Control+Shift+C.</p>
+
+</BODY>
+</HTML>

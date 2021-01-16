@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta name="GENERATOR" content="Microsoft Visual Studio 8.0"/>
+<title>Ribbon Peak-Picking Tab</title>
+</head>
+<body>
+<p><i>Net12NMR</i> defines peaks as points in a spectrum that is in between two adjacent points of lesser intensity. A peak may have
+a flat top (two or more points with the exact same intensity). This algorithm is not designed for broad, low S/N peaks. In that
+case, you can accurately determine the peak chemical shift by using <i>NetSpan</i> to deconvolute the peak parameters. With limited
+space across the top of the display, all peaks may not be labeled if they are too close together. In that case, you can zoom in for
+a closer look or look to the &quot;Peaks&quot; tab of the <a href="output_window.htm">Output Window</a>. All found peaks will be
+listed there.</p>
+<p>The peak-picking Ribbon tab, labeled <b>Peaks</b> contains three panes: <b>Action</b>, <b>Listing</b> and <b>Process Shelf</b>.</p>
+<p>The <b>Actions</b> pane has a command button for deleting all currently defined peak thresholds, <b>Clear All Thresholds</b>. It also
+has a button for clearing any thresholds between the zoom cursors, <b>Clear Single Region</b>. The <b>Spreadsheet Analysis</b> button
+will produce a spreadsheet that has an interaction matrix that shows the Hz and PPM differences for all the peaks found in the current
+displayed region of the active document.</p>
+<p>Please note that there is no command button for setting a threshold and this is because these must be set using the graphical user
+interface: Place the zoom cursors around desired new threshold region the place the the cross-hairs cursor at the height of the desired
+threshold, context mouse click and select <b>Set Threshold</b>.</p>
+<p>A shortcut also exists for setting and clearing thresholds: While setting the zoom cursors, hold down the Shift-key or the Control-key
+to set or clear a threshold between the zoom cursors. Using this method to set a threshold the intensity value of the resulting
+threshold will be at the height of the cross-hairs cursor when you start setting the zoom cursors (when you click the mouse select
+button).</p>
+<p>Control item in the <b>Listing</b> pane determine the form of the peak listings. When checked, the <b>Use parabolic fit</b> will list
+found peaks using the maxium of a parabola to fit the top few points in the found peak. otherwise the peak positions are
+simply the chemical shift of the maximum point found. Listing can be in Hertz or PPM selected by the checkboxes in this pane. The
+number of places to the right of the decimal point can set for both PPM and Hertz listing through two drop-down selectors in this pane.</p>
+<p>Peak region can be pulled from or stored to the <a href="ribbon_tab_shelf.htm">Processing Shelf</a> in the <b>Process Shelf</b>
+pane. On the Processing Shelf, peak heights are stored as fractions of the spectrum range so that different spectra (of similar compounds)
+can still benefit from these thresholds.</p>
+<p>Selecting the <b>Peaks</b> tab will also automatically show the &quot;Peaks&quot; tab of the <a href="output_window.htm">Output Window</a>.</p>
+</body>
+</html>

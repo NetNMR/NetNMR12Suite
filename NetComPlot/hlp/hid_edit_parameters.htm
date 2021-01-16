@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE>(Edit Parameters Command)</TITLE>
+</HEAD>
+<BODY>
+<P>The Parameters command displays a dialog used to adjust
+everything about the current NetComPlot composite plot (except NMR
+file selection).
+</P>
+
+<P>In the upper left corner of this dialog, the range of data to
+be displayed is specified. Specify the vertical and horizontal
+range in PPM or Hertz. You must specify the plot range in PPM or
+Hertz. All files will be plotted correctly according to
+the range specified.  Please Note that this means that only a
+piece of the spectrum (or nothing at all) might be plotted, if the
+specified PPM or Hertz range is not common to the spectrum. A
+"Full" button is available for setting either the horizontal or
+vertical range according to all the 2D data in the current
+document. 
+</P>
+
+<P>In the upper right of the dialog the size of each
+region is specified. All sizes and 1D offsets are in centimeters.
+The first horizontal and vertical 1-D spectra are
+plotted next to the 2-D axis tic marks. Each additional 1-D
+spectrum is offset by the specified amount. 
+The 2-D offset is is computed from the approimate computed size of
+the graphics.
+</P>
+
+<P>The background color of the page and the color of the axis 
+as well as the color of the file information can
+be selected in the Colors group box.
+</P>
+
+<P>Near the center of the page, the contour plotting parameters of
+each of the 2-D spectra is specified. Select the 2-D file from the
+drop-down list box and each plotting parameter can be adjusted.
+Mode selects positive, negative or both contours. Contours is the
+number of contours to be plotted.  Spacing is either Linear
+spacing or Logarithmic contour spacing.  %Ceiling and %Floor
+specify where the height of where the contours are placed and are
+a percentage of the largest magnitude in the 2-D data set.
+Finally the colors of the positive and negative contours can be
+selected.
+</P>
+
+<P>Near the bottom of the dialog, the 1-D spectra parameters are
+specified.  Select the particular horizontal or vertical spectrum
+in the drop-down list box. %Floor and %Ceiling is the range of
+intensities the 1-D spectra will be scaled compared to the largest
+(100%) and smallest (0%) intensities in the 1-D file(s).
+</P>
+
+</BODY>
+</HTML>

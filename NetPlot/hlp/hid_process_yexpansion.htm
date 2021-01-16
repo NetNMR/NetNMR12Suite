@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P><A NAME="hid_process_yexpansion"></A><B>Y-Expansion Dialog</B></P>
+
+<P>The <b>Y-Expansion Dialog</b> is used to adjust the y-scale of individual spectrain the <i>NetPlot</i> document. Adjusting the y-expansion of individual spectra doesnot affect any integral of that spectrum, just like the <a href="hid_view_global.htm">Globalscaling</a> control. The user selects a spectrum and then adjust the yscale of that spectrum.The scale factor can be explicitly set through a text-edit control or can be adjusted withboth the mouse wheel or the keyboard <b>UP-</b> and <b>DOWN-Arrow</b>. The arrows change thescaling by a factor of 2 while each click of the mouse wheel move the scale the fourth rootof two, or about 19%. If the <b>Control</b> key is held down while using the wheel, the effectwill be smaller, the sixteenth route of two, about 4%. This dialog contains the following controls:</P>
+<TABLE cols=2 width=900>
+<TR VALIGN="top">
+<TD width=18%>Spectrum Drop-down Selection</TD>
+<TD width=82%>This drop-down selection tool is used to select the individual spectrum to be adjusted.</TD></TR>
+<TR VALIGN="top">
+<TD width=18%>Change Button</TD>
+<TD width=82%>This button is used to load the y-scale parameter from the ajacent text edit control.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>Edit Control</TD>
+<TD width=82%>The new y-scale value is specified here. Once the value has been input, press the <b>Change</b>button next to this edit control. Valid values are any real positive number. A number greater than 1.0 will causethe slected spectrum to grow while a value less than 1.0 will cause the selected spectrum to shrink.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>Reset Button</TD>
+<TD width=82%>This button will reset all individual y-scale factors to 1.0.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>Global Checkbox</TD>
+<TD width=82%>Not actually part of the individual y-scale control, but there for continuity, this checkboxwill turn on and off <a href="hid_view_global.htm">global scaling</a>.</TD>
+</TR></TABLE>
+</BODY>
+</HTML>

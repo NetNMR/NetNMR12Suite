@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Confidence menu commands)</TITLE>
+</HEAD>
+<BODY>
+<P><A NAME="menu_confidence"></A><B>Confidence menu commands</B></P>
+<P>The <b>Confidence</b> menu offers commands to adjust the confidence intervals displayedon the density function plot. You can adjust the size of the interval by changing the confidencelevel. A higher confidence level results in larger intervals:</P>
+<TABLE cols=2 width=800>
+<TR VALIGN="top">
+<TD width=18%>68.3%</TD>
+<TD width=82%>Confidence intervals are 1.0 standard deviations for simple intervals and ChiSq=2.3 forjoint intervals.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>90%</TD>
+<TD width=82%>Confidence intervals are 1.6 standard deviations for simple intervals and ChiSq=4.6 forjoint intervals.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>99.5%</TD>
+<TD width=82%>Confidence intervals are 2 standard deviations for simple intervals and ChiSq=6.2 forjoint intervals.</TD>
+</TR><TR VALIGN="top">
+<TD width=18%>99%</TD>
+<TD width=82%>Confidence intervals are 2.6 standard deviations for simple intervals and ChiSq=9.2 forjoint intervals.</TD>
+</TR><TR>
+<TD width=18%>99.73%</TD>
+<TD width=82%>Confidence intervals are 3 standard deviations for simple intervals and ChiSq=11.8 forjoint intervals.</TD>
+</TR><TR>
+<TD width=18%>99.99%</TD>
+<TD width=82%>Confidence intervals are 3.9 standard deviations for simple intervals and ChiSq=18.4 forjoint intervals.</TD>
+</TR></table>The user can select between simple confidence ellipses or joint confidence ellipses. Joint ellipseswill better simulate the results of a <a href="hid_process_montecarlo.htm">Monte Carlo simulation</a>.<table><TR VALIGN="top">
+<TD width=18%>Simple</TD>
+<TD width=82%>Confidence interval ellipses are calculated for each variable, independently.Error ellipses (intensity <i>vs.</i> rate or intensity <i>vs.</i> time are always allignedon the cartesian grid.</TD>
+</TR><TR VALIGN="top">
+<TD width=18%>Joint</TD>
+<TD width=82%>Confidence interval ellipses are calculated jointly for each term in the densityfunction. This will generally results in ellipses that are not alligned on the cartesian grid, butare tilted. Typically, terms that are close to one another are tilted toward each other. Theellipses can appear curved due to the non-linear x-axis.</TD>
+</TR></TABLE>
+</BODY>
+</HTML>

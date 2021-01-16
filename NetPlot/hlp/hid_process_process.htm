@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P><A NAME="hid_process_process"></A><B>Process Dialog</B></P>
+
+
+
+<P>The <b>Process Dialog</b> is used to convert raw free induction data (FID) to
+Fourier transformed spectra. The button commands on this dialog only work on
+data that has been <a href="hid_file_add.htm">added</a> during the current session
+and only if the raw FID files have been imported. Any button command performed on
+data that has already been transformed will be ignored and no error will be reported
+to the user. Please note that raw FID data will not be saved in a Netplot (*.npl) file,
+so raw FID data must be Fourier transformed during the same session that the file
+data was <a href="hid_file_add.htm">added</a>. Each of the buttons iterate over all
+spectra in the current document. This dialog contains the following buttons:</P>
+
+<TABLE cols=2 width=900>
+
+<TR VALIGN="top">
+
+<TD width=18%>DC Level button</TD>
+
+<TD width=82%>This command averages the last 1/16 of the real and imaginary FID data and
+subtracts that average from the real and imaginary data.</TD>
+
+<TR VALIGN="top">
+
+<TD width=18%>Truncate button</TD>
+
+<TD width=82%>This command reduces the current data size until the next power of 2.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>Apodize button</TD>
+
+<TD width=82%>This command performs apodization on each FID. Lorentian or Gaussian can be chosen
+with a user-selectable dropdown while the amount of broadening can be selected in another dropdown
+This dropdown will also accept any numeric value the user types. The units of the numeric value (<b>PPM</b>
+or <b>Hertz</b>) are selectable through a third dropdown.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>Zerofill</TD>
+
+<TD width=82%>Each FID is zerofilled up to the next power of 2.</TD>
+
+</TR>
+
+<TR VALIGN="top">
+
+<TD width=18%>FT</TD>
+
+<TD width=82%>Each FID is Fourier transformed. If the current data size is not a power
+of 2, it is zerofilled first. The current global phase correction is applied to the
+new spectrum.</TD>
+
+</TR>
+</TABLE>
+</BODY>
+</HTML>

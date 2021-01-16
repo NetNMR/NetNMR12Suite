@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta name="GENERATOR" content="Microsoft Visual Studio 8.0"/>
+<title>Ribbon Baseline Tab</title>
+</head>
+<body>
+<p>In the <b>Linear></b> pane of this panel, the <b>Level</b> button will do a simple linear baseline correction
+of the currently displayed region of the current spectrum. Note that this can be a sub section of the entire spectrum.
+<b>Level</b> will use 1/32nd (or a minimum of two points at each end of the displayed region to calcualte a linear
+correction to the spectrum. Any undisplayed portion of the spectrum will not be affected by this command.</p>
+<p><b>Zero</b> will zero the point of the spectrum between the zoom cursors. Use with respect with regard to 
+scientific integrity.</p>
+<p>Once this <b>Baseline Tab</b> is slected, the display will change. The spectrum information and parameters are
+hidden and a current baseline is drawn. The <b>Choose Baseline</b> pane has commands to select which portion of the
+current spectrum to use in the baseline correction calculation. The current baseline is drawn in two colors. By
+default regions of the spectrum that are assigned to the baseline are drawn in red while region of the spectrum
+which are not in the baseline (and are to be ignored) are draw in grey, although the user can change these
+color assignments. Initially the entire spectrum is included in the baseline. To remove a region, put the zoom
+cursors around the region and presss the <b>Remove Baseline</b> button. To add a region back into the baseline,
+put the zoom cursors around that region and press the <b>Add Baseline</b> button. A short-cut exists for these
+two actions. Simply select a region of the spectrum with the zoom cursors <i>while holding down the SHIFT key</i>
+to remove a region of the baseline or <i>hold down the CONTROL key</i> to add a region to the baseline.</p>
+<p><b>Reset</b> will reinitialize the baseline to include the entire spectrum.</p>
+<p>You can use commands in the <b>Auto Find</b> pane to automatically determine which regions of the spectrum to
+include in the baseline calclation and which to exclude. The <b>S/N</b> parameter specifies the minimum
+signal-to-noise to use in detecting possible peaks in the spectrum. A value of &quot;7&quot; is a good place to
+start for most spectra. <b>Width</b> specifies the number of points around a found peak that will automatically
+be excluded from the baseline. A value of &quot;120&quot; is a good value for most high resolution spectra.</p>
+<p><b>Auto Find</b> button will then use the <b>Width</b> and <b>S/N</b> parameters to find the baseline in the
+current spectra. Once the selection is close, you can use the manual commands in the <b>Choose Baseline</b>
+pane to fine-tune your selection.</p>
+<p>Actually calculating the baseline is done with the commands in the <b>Baseline Calculate</b> pane. Two different
+methods are possible. The first uses the selected points in the spectrum to fit to up to a ten-term polynomial.
+The other method uses a moving average to calculate the baseline. First, select the method you want with the
+check boxes, then you can press the <b>Calculate Baseline</b> button to see what the calculated baseline
+looks like. For either method, you may decide you want to include or remove additional points in the spectrum.
+Go ahead and do this and then press the <b>Calculate Baseline</b> button again. Each method has a single
+adjustable parameter. For the Polynomial method, you can select the number of polynomial terms with the
+<b>Order</b> drop-down selection. Selecting a polynomial of less than ten terms is very useful when most
+of your spectrum is occupied by NMR line intensity and only a small portion is assignable to baseline.</p>
+<p>The Moving Average method will replace each point in that is assigned to be in the baseline by the
+<b>Width</b> number of points around the point. &quot;32&quot; is a good number for typical high-resolution
+spectra of at least 16k points in size. A value of less than this may be better for smaller data files.</p>
+<p>Once you are happy with the calculated baseline, press the <b>Apply Baseline</b> button to subtract
+the calculated baseline from the spectrum.</p>
+<p>The <b>Process Shelf</b> can be use to store and retrieve a baseline region quickly on the
+<a href="ribbon_tab_shelf.htm">Processing Shelf</a>. Unless you already have something on the shelf,
+it is always a good idea to save you current baseline selection to the shelf, in case you want to 
+completely reprocess the spectrum. The <b>To Shelf</b> button will only be active when you have defined
+at least one baseline region to exclude from the baseline. The <b>From Shelf</b> button will only
+be active when there are baseline regions on the shelf.</p>
+</body>
+</html>

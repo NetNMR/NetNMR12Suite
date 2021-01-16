@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P><A NAME="hid_process_regions"></A><B>Regions Dialog</B></P>
+
+<P>The <b>Regions Dialog</b> is used to select regions of the currentNetPlot document. The current region between the zoom cursors can be addedor removed with command buttons on this dialog. Up to a 10-term simplepolynomial can be fit to the spectrum using all the spectral point not currentlyin a region. In addition, integrals of the current selected regions can beanalyzed with an accompanying spreadsheet macro. In usual practice, the baselineis corrected first by selecting any region that needs to be exculded from the baseline,<i>i.e.</i>, contains no peak intensity. Then the regions can be optionally modifiedand then passed to an external program for analysis.This dialog contains the following buttons:</P>
+<TABLE cols=2 width=900>
+<TR VALIGN="top">
+<TD width=18%>Add button</TD>
+<TD width=82%>The region currently between the zoom cursors will be added to the regions.This region will be display in an alternate, user-selectable color.</TD>
+<TR VALIGN="top">
+<TD width=18%>Clear button</TD>
+<TD width=82%>The region currently between the zoom cursors will be removed from the regions.This region will be display in an default, user-selectable color.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>Clear All</TD>
+<TD width=82%>All seleceted regions will be removed from the current NetPlot document.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>Order dropdown</TD>
+<TD width=82%>The polynomial order of the baseline correction is slected. Valid values rangefrom 2 to 10.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>Calculate pushbutton</TD>
+<TD width=82%>The polynomial correction for each spectrum is calculated and displayed in auser-selected color. In a pused state, this button is relabeled "Apply". To apply the currentselection, push this button again.</TD>
+</TR><TR VALIGN="top">
+<TD width=18%>Cancel button</TD>
+<TD width=82%>This will exit the current baseline calculation and display with applyingany correction.</TD>
+</TR><TR VALIGN="top">
+<TD width=18%>Excel&reg; button</TD>
+<TD width=82%>The integral of each region of each spectrum in the current NetPlot documentis calculated and copied to a new Excel&reg; workbook. Add-in commands are then availableto build an analysis spreadsheet based on a user-selected function. Excel's solver can thenbe used to fit the function parameters to the integral data.</TD>
+</TR>
+<TR VALIGN="top">
+<TD width=18%>ILT button</TD>
+<TD width=82%>The integral of each region of each spectrum in the current NetPlot documentis calculated and passed to ILT.exe for analysis by inverse LaPlace transform. ILT.exe canfit the data to a distribution of exponential functions.</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
